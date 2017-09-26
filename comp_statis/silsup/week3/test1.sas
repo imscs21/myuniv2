@@ -1,0 +1,16 @@
+libname mylib "/folders/myshortcuts/silsup/week3";
+proc sort data=sashelp.class out=sil1;
+by descending age;
+run;
+proc print data=sil1;
+run;
+proc plot data=sil1;
+plot HEIGHT*AGE= "*" / VAXIS= 50 to 72.5 by 2.5 HAXIS=11 to 16;
+run;
+proc sort data=sashelp.class out=sil2;
+by  age;
+run;
+proc means data=sil2;
+class age;
+var height;
+run;

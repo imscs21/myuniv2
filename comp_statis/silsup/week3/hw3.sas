@@ -1,0 +1,18 @@
+libname mylib "/folders/myshortcuts/silsup/week3";
+proc sort data=sashelp.class out=hw1;
+by descending age;
+run;
+proc plot data=sashelp.class;
+plot age*weight= "*" / VAXIS= 10 to 20  HAXIS=50 to 160 by 10;
+run;
+proc sort data=sashelp.class out=mylib.hw2;
+by  age;
+run;
+proc univariate data=mylib.hw2;
+	by age;
+	var weight;
+run;
+proc means data=mylib.hw2;
+class age;
+var Weight;
+run;

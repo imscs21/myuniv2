@@ -1,0 +1,64 @@
+
+body{
+  background-image: url("http://www.cs.washington.edu/education/courses/190m/10su/labs/2/images/background.gif");
+}
+body > p:last-child{
+  margin-right: 10%;
+  margin-left:10%;
+}
+body > div{
+  border-color: white;
+  border-width: 10px;
+  border-style: solid;
+  background-color: white;
+  margin-right: 10%;
+  margin-left:10%;
+}
+/*body *:not(body>p):not(body>p *):not(div):not(aside):not(aside ul):hover{
+  background-color:#A6CE39;
+}*/
+body *:not(body):not(div):not(aside):not(ul):hover{
+  background-color:#A6CE39;
+}
+body >div> div:first-child{
+
+  text-align: right;
+  background-color: #1D2475;
+  color:white;
+}
+body >div> div:first-child > h2{
+  color:#CCCCCC;
+  font-size: 14pt;
+
+}
+body > div > aside,body >div> div> div{
+  text-align: justify;
+  border-color: #1D2475;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 15px;
+  background-color: #99CCFF;
+  padding:5px;
+  margin-top: 5px;
+}
+body > div >  aside{
+  width:150px;
+  background-color: #3366CC;
+  margin:10px;
+  float:left;
+
+}
+body >div> div:first-child~div{
+  overflow: hidden;
+}
+body >div> div> div{
+
+overflow: hidden;
+}
+body >div> div> div img{
+  float:right;
+}
+body >div> div> div h2 > span{
+  border-bottom: 2px dashed blue;
+  clear:right;
+}

@@ -1,0 +1,167 @@
+/*
+Name: 황세현(Hwang se hyeon) 
+Student Number: 2016004011
+*/
+body{
+    background-image:url("background.png");
+    font-size:8pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:0px;
+    padding:0px;
+}
+body>div:first-child{
+    background-image:url("bannerbg.png");
+    background-repeat: repeat-x;
+    height:50px;
+}
+body>div:last-child{
+    position: fixed;
+    opacity: 0.5;
+    bottom:0;
+    right:0;
+}
+#foot{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#foot p{
+    background-color:#A2B964;
+    margin:auto;
+    padding:5px;
+    text-align: center;
+}
+img[src="banner.png"]{
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+   height:50px;
+}
+body>div:nth-child(3){
+    width:800px;
+    margin:auto;
+    border-width:4px;
+    border-color:gray;
+    border-style: solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+body>h1{
+    text-align: center;
+    font-size:24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana,sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+#leftcontent{
+    width:550px;
+    overflow: hidden;
+    float:left;
+    margin:0px;
+    padding:0px;
+}
+#rightcontent{
+    background-color:#A2B964;
+    width:250px;
+    display: inline-block;
+    font-size: 8pt;
+    font-family: Arial sans-serif;
+    border:none;
+}
+#rightcontent dl{
+    margin:10pt;
+}
+#rightcontent dt{
+   font-weight: bold;
+   margin-top:10pt;
+}
+#rightcontent ul{
+    list-style: none;
+
+    padding:0px;
+}
+
+#leftcontent>div:first-child{
+   background-image:url("rbg.png");
+   background-repeat:repeat-x;
+   height:83px;
+   font-size:48pt;
+    font-weight: bold;
+    color:red;
+}
+#leftcontent>div:first-child>img{
+    vertical-align:bottom;
+    height:83px;
+}
+
+.usercontent > div{
+    width:47%;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    margin-left:2%;
+}
+/*.usercontent>div:first-child{
+    margin-left:2%;
+    margin-right:0.6%;
+}
+.usercontent>div:last-child{
+    margin-right:2%;
+    margin-left:0.6%;
+}
+*/
+/*.usercontent{
+    overflow: hidden;
+}
+.usercontent > div{
+    width:47%;
+    vertical-align: top;
+}
+
+.usercontent>div:first-child{
+    float:left;
+    margin-left:2%;
+}
+.usercontent>div:last-child{
+    float:right;
+    margin-right:2%;
+}*/
+.usercontent  p{
+    overflow: hidden;
+}
+.usercontent  p:nth-child(even) span {
+    margin-left:5px;
+}
+.usercontent  p:nth-child(even) >span span{
+    font-style:italic;
+}
+.usercontent  p:nth-child(even){
+
+    margin-bottom:20pt;
+}
+
+
+.usercontent img[src="fresh.gif"] ,.usercontent img[src="rotten.gif"]  {
+   float:left;
+   margin-right:5px;
+   overflow: hidden;
+}
+
+.usercontent img[src="critic.gif"]{
+    float:left;
+}
+.usercontent p div{
+    font-style:italic;
+}
+.usercontent  p:nth-child(odd){
+    font-weight: bold;
+    font-size: 8pt;
+    background-color: #E8DC9B;
+    border-color:gray;
+    border-style:solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding:8px;
+    overflow: hidden;
+
+
+}

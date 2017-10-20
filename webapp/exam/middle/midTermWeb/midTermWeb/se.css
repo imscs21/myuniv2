@@ -1,0 +1,118 @@
+/* name : Hwang se hyeon, ID: 2016004011, year: 2 */
+
+/* specification 2a (write appropriate selector). */
+		 @font-face{
+			 font-family:'prime';
+			 src:url('font/primer.otf');
+		 }
+		 
+
+
+
+
+/* specification 2a & 2b. */
+body {
+	font-family:'prime';
+	background-color:#00ABD9;
+}
+
+
+
+
+/* specification 3a & 3b .*/
+#page {
+	width:950px;
+	margin:auto;
+	border-bottom :5px solid black;
+	background-color:white;
+}
+
+
+
+
+
+
+/* specification 4a 4b (write appropriate selector) */
+	
+nav ul{
+	background-color: black;
+	list-style: none;
+	text-align: center;
+	padding:0px;
+ }
+
+
+
+
+
+
+
+/* specification 4a 4c (write appropriate selector) */
+		nav li {
+			display:inline-block;
+			line-height: 2em;
+			margin-right:1.5em;
+			margin-left:1.5em;
+		}
+
+
+/* specification 4b (write appropriate selector) */
+	 nav a{
+		 font-weight: bold;
+		 text-decoration: none;
+		 color:#A690AF
+	 }
+
+
+
+
+/* specification 5a (write appropriate selector) */
+		nav + section{
+			margin-left:1.5em;
+			margin-right:1.5em;
+		}
+
+
+
+
+/* specification 5b (write appropriate selector) */
+	h2{
+		text-decoration: underline;
+		color:#00ABD9
+	}
+
+
+
+
+/* specification 6 .*/
+.mid {
+	text-align: center;
+}
+
+
+
+/* specification 7a, 7b, 7c, 7d, and 7e */
+#joinSE {
+float:right;
+font-weight: bold;
+font-size: 190%;
+
+background-color:#8BCBE3;
+padding:1em;
+margin:0.75em;
+}
+
+
+
+
+
+
+
+
+/* extra mark : 
+ * examine 'screenshot.png' and find out which style is still not specified in CSS 
+ * & create and apply an associated rule */ 
+ strong{
+	text-decoration: underline;
+ }
+ 

@@ -1,0 +1,218 @@
+<!--
+	name : Hwang se hyeon, ID: 2016004011, year: 2
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Q1. Forms</title>
+		<style  type="text/css">
+			label.heading {
+				float: left;
+				margin-right: 1em;
+				text-align: right;
+				width: 7em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>
+			CSE3026 Web App. Dev. : Student Survey
+		</h1>
+
+		<!-- Complete the form element with additional attribute so that it can pass form value as well as a file -->
+		<form action="formProcessor.php" method="post"enctype="multipart/form-data" >
+			
+			<!-- Provide input forms as seen in the sample screenshot
+				 Provide labels for each input where all the labels under the 'Student Information' box should have class "heading"
+							
+				 Create a box surrounding different input forms below with the "Student Information:" as legend --> 
+				<fieldset>
+					<legend>
+				Student Information:
+			 </legend>
+				<!-- Create a text field with 
+					 "sname" as name & id, "Scott Lee" as initial value, and "Name:" as label
+					  Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+				<label class="heading">Name:</label> <input name="sname" type="text" id="sname" value="Scott Lee" />
+				<br />
+				
+				<!-- Create a text field with 
+					 "sid" as name & id, "2011010528" as initial value, and "Studnet ID:" as label
+					  Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->				
+					 <label class="heading">Student ID:</label> <input type="text" name="sid" id="sid" value="2011010528" />
+				<br />
+				<!-- Create an input with "dob" as name & id and "Date of Birth:" as label
+					 * Use HTML5's new input type so user can select a date from drop-down calendar
+					  Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->				  
+					  <label class="heading">Date of Birth:</label> <input type="date" name="dob" id="dob" />
+				<br />
+				<!-- Create an input with 
+					 "email" as name & id, "scottlee@hanyang.ac.kr"as initial value and "Email" as label
+					 Also set the size of this input to be 25 characters long. 
+					 * Use HTML5's new input type specifically designed to validate email as an input
+					 Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->			
+					  <label class="heading">Email: </label><input type="email" value="scottlee@hanyang.ac.kr" id="email" size="25" name="email" />
+				<br />
+				<!-- Create an input for user to unpoad a file with "photo" as name & id and "Photo:" as lable.
+					 Do not nest input inside label for the above forms (<label><input .../></label> => incorrect )	-->
+	
+					  <label class="heading">Photo:</label> <input type="file" name="photo" id="photo" />
+				<br />				
+												
+				<!-- You can nest input inside label for the below forms (<label><input .../></label> => OK ) -->
+				
+				<!-- Create a label "Class:" -->
+				
+				
+				<!-- Create two radio buttons with 
+					 "sclass" as names, "2" & "3" as values, and "2nd yr" & "3rd yr" as labels
+					 The radio button with the value "2" and the label "2nd yr" should be checked initially
+				-->
+				
+					
+				<label class="heading">Class:</label>
+				<input type="radio" name="sclass" value="2" checked="checked"/> 2nd yr
+				<input type="radio" name="sclass" value="3"/>3rd yr
+			
+			</fieldset>
+			
+			<!-- Provide input forms as seen in the sample screenshot
+				 			
+				 Create a box surrounding different input forms below with the "Course Evaluation Survey:" as legend --> 
+		
+				<fieldset>
+					<legend>
+							Course Evaluation Survey:
+					</legend>
+
+				
+				Select your 3 favorite Chapters. <br />
+				<!-- Create a drop-down list with "favoriteChapter" as name. 
+					 The list should show 5 options and user can select multiple items.--> 
+				
+					<!-- Create option group "HTML, CSS, PHP"
+						 Under this option group there are 6 options as shown below -->
+						 <select name="favoriteChapter[]" value="" size="5" multiple="multiple">
+								<optgroup label="HTML, CSS, PHP" >
+										<option>
+											   Basic HTML
+										</option>
+										<option>
+											   CSS for Styling
+										</option>
+										<option>
+											   Page Layout
+										</option>
+										<option>
+											   Forms
+										</option>
+										<option>
+												PHP
+										</option>
+										<option>
+											   Cookies &amp; Session
+										</option>
+									</optgroup>
+						 
+						 
+						 <!--
+					HTML, CSS, PHP
+						Basic HTML
+						CSS for Styling
+						Page Layout
+						Forms
+						PHP
+						Cookies &amp; Session
+					
+					<!-- Create option group "JavaScript, RDB, SQL"
+						 Under this option group there are 6 options as shown below -->
+						 <optgroup label="JavaScript, RDB, SQL">
+							 <option>
+									RDB &amp; SQL
+							 </option>
+							 <option>
+									JavaScript
+							 </option>
+							 <option>
+									DOM
+							 </option>
+							 <option>
+									Prototype
+							 </option>
+							 <option>
+									Scriptaculous
+							 </option>
+							 <option>
+									Ajax, XML, &amp; JSON
+							 </option>
+						 </optgroup>
+						 <!--
+					JavaScript, RDB, SQL
+						RDB &amp; SQL
+						JavaScript
+						DOM
+						Prototype
+						Scriptaculous
+						Ajax, XML, &amp; JSON
+						 -->
+					</select>
+				<hr /> 
+				<div>
+					Select the most difficult lab sessions. <br />
+					<!-- Create radio buttons for 4 lab session 
+						 The text shown below should be used as both values and label texts for radio buttons 
+						 Make aure that you add labels which user can click (label text) to check corresponding radio buttons
+						 Initially "1. Music Library" should be checked -->
+						 <label>
+							 <input type="radio" name="diffLab"  checked="checked" value="1. Music Library" />
+					1. Music Library 
+					</label>
+					<label><input type="radio" name="diffLab" value="2. Grade Store" />
+					2. Grade Store
+				</label>
+				<label><input type="radio" name="diffLab" value="3. JavaScript" />
+					3. JavaScript</label>
+					<label><input type="radio" name="diffLab" value="4. Book Search" />
+					4. Book Search</label>
+				</div> 
+				<hr />
+				<div>
+					Check all assessment methods that you thought were inappropriate.<br />
+					<!-- Create checkboxes for 3 assessment methods
+						 Use "lab", "project", "exam" as names for checkboxes
+						 Make aure that you add labels which user can click (label text) to check corresponding checkboxes
+						 Nothing should be checked initially -->
+							 <label><input type="checkbox" name="lab" />
+					Laboratory</label>
+					<label><input type="checkbox" name="project" />
+					Team Project</label>
+					<label><input type="checkbox" name="exam" />
+					Exams</label>
+				</div>
+				<hr />
+				<div>
+					Provide any additional comments about the course.<br />
+					<!-- Create a text area with 32 characters wide and 3 line long. -->
+					<textarea cols="32" rows="3" name="comments" placeholder="Please provide additional comments here."></textarea>					
+						<!--
+					Please provide additional comments here.
+						-->
+				</div>
+					</fieldset>	
+			
+			
+			<div>
+				<!-- Provide 2 hidden inputs:
+					 with name "course" and value "CSE3026"
+					 with name "year" and value "2017"	-->
+					<input type="hidden" name="course" value="CSE3026"/>
+					<input type="hidden" name="year" value="2017" />
+			</div>
+			
+			<!-- Create a submit button with the button text "Submit Survey"-->
+			<input type="submit" value="Submit Survey" />
+			
+		</form>
+	</body>
+</html>

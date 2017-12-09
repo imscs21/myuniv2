@@ -1,0 +1,20 @@
+#! /usr/bin/env Rscript
+library(MASS);
+summary(cats);
+t <- data.frame(summary(cats));
+fd <- strsplit(toString(t[1,"Freq"]),split=":");
+md <- strsplit(toString(t[2,"Freq"]),split=":");
+fd<-fd[[1]];
+md <- md[[1]];
+fd[2] <- as.numeric(fd[2]);
+md[2] <- as.numeric(md[2]);
+y <- c(as.numeric(fd[2]),as.numeric(md[2]));
+barplot(y,ylab="Number of cats",xlab="Gender",main="Number of Cats by gender",names=c(fd[1],md[1]));
+x <- as.list(cats$Bwt);
+y <- as.list(cats$Hwt);
+xlabel <- "Body Weight(kg)";
+ylabel <- "Heart Weight(g)";
+mainlbl <- "Heart Weight(g) by Body Weight(kg) of cats";
+xlimit <- c(1,4);
+ylimit <- c(6,21);
+plot(x,y,xlim=xlimit,ylim=ylimit,main=mainlbl,ylab=ylabel,xlab=xlabel,col="red",pch="♡");

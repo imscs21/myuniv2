@@ -1,0 +1,17 @@
+div#orangearea {
+    border: 5px dashed black;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.inorangearea{
+	position: absolute;
+    background-image: url("orange.png");
+    width: 100px;
+    height: 100px;
+}
+
+.highlight {
+	background-color: yellow;
+}

@@ -1,0 +1,38 @@
+asdasd;asdassss;112;visa
+asdasd;asdassss;112;visa
+asdasd;asdassss;112;visa
+asdasd;asdassss;112;visa
+;;;
+asdasd;asdassss;112;visa
+asd asd;2ss;4300523877775238;visa
+asd asd;2ss;5855457454324754;mastercard
+asd;ass;4300523877775238;visa
+asd;ass;4300523877775238;visa
+asd;ass;4300523877775238;visa
+asd;ass;4300523877775238;visa
+asd;ass;4300523877775238;visa
+Scott Uk-Jin Lee;12341234;4234567890123456;visa
+Scott Uk-Jin Lee ;12341234;4234567890123456;visa
+Scott Uk-Jin Lee;12341234;5234567890123456;mastercard
+Scott Uk-Jin Lee;12341234;4234567890123456;visa
+Scott Uk-Jin Lee;;4234567890123456;visa
+
+and hh;sad;4300523877775238;visa
+and hh a;sad;4300523877775238;visa
+and hh a;sad;4234567890123456;visa
+and hh a;sad;5234567890123456;mastercard
+and hh-a;sad;5234567890123456;mastercard
+and hh--a;sad;5234567890123456;mastercard
+and hh- a;sad;5234567890123456;mastercard
+and hh  a;sad;5234567890123456;mastercard
+nd-- hh a;sad;5234567890123456;mastercard
+nd hh a;sad;5234567890123456;mastercard
+nd hh a;sad;5234567890123456;mastercard
+nd hh a;sad;5234567890123456;mastercard
+nd hh a;sad;4234567890123456;visa
+nd hh a;sad;4234567890123456;visa
+Scott;sad;4234567890123456;visa
+s;1234;4234567890123456;visa
+s a;1234;4234567890123456;visa
+a;1234;4234567890123456;visa
+a;1234;4234567890123456;visa

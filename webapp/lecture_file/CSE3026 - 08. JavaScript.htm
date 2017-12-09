@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://selab.hanyang.ac.kr/courses/cse326/2017/lecture/08-javascript.html#slide37 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- metadata -->
+		
+		<meta name="author" content="Scott Uk-Jin Lee">
+		<meta name="description" content="Web lecture slides for CSE3026: Web Application Development.">
+		<meta name="keywords" content="hanyang university, cse3026, web application development, lecture, html, css, javascript, dom, ajax, xml, php, jsp">
+		
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="./CSE3026 - 08. JavaScript_files/slides.css" type="text/css" media="screen" id="slideProj">
+		<link rel="stylesheet" href="./CSE3026 - 08. JavaScript_files/outline.css" type="text/css" media="screen" id="outlineStyle" disabled="">
+		<link rel="stylesheet" href="./CSE3026 - 08. JavaScript_files/print.css" type="text/css" media="print" id="slidePrint">
+		<link rel="shortcut icon" href="http://selab.hanyang.ac.kr/courses/cse326/2017/lecture/images/SelabFavicon.png" type="image/png">
+
+		<!-- S5 JS -->
+		<script src="./CSE3026 - 08. JavaScript_files/prototype.js" type="text/javascript"></script>
+		<script src="./CSE3026 - 08. JavaScript_files/scriptaculous.js" type="text/javascript"></script><script type="text/javascript" src="./CSE3026 - 08. JavaScript_files/builder.js"></script><script type="text/javascript" src="./CSE3026 - 08. JavaScript_files/effects.js"></script><script type="text/javascript" src="./CSE3026 - 08. JavaScript_files/dragdrop.js"></script><script type="text/javascript" src="./CSE3026 - 08. JavaScript_files/controls.js"></script><script type="text/javascript" src="./CSE3026 - 08. JavaScript_files/slider.js"></script><script type="text/javascript" src="./CSE3026 - 08. JavaScript_files/sound.js"></script>
+		<script src="./CSE3026 - 08. JavaScript_files/slides.js" type="text/javascript"></script>
+		<script src="./CSE3026 - 08. JavaScript_files/slides(1).js" type="text/javascript"></script>
+		
+		<title>CSE3026 - 08. JavaScript</title>
+	<style media="screen, projection" id="s5ss">body {font-size: 28px !important;}</style></head>
+
+	<body cz-shortcut-listen="true">
+		<div class="layout">
+			<div id="controls"><form action="http://selab.hanyang.ac.kr/courses/cse326/2017/lecture/08-javascript.html#" id="controlForm" undefined=""><div id="navLinks"><div id="navaLinks"><a accesskey="t" id="toggle" title="Print View" href="javascript:toggle();">Ø</a><a accesskey="z" id="prev" title="Previous Slide" href="javascript:go(-1);">«</a><a accesskey="x" id="next" title="Next Slide" href="javascript:go(1);">»</a></div><div id="navList"><select id="jumplist" onchange="go(&#39;j&#39;);"><option value="0 : CSE3026: Web Application Development  JavaScript">0 : CSE3026: Web Application Development  JavaScript</option><option value="1 : === 8.1: Key JavaScript Concepts ===">1 : === 8.1: Key JavaScript Concepts ===</option><option value="2 : 
+		Client-side scripting
+	">2 : 
+		Client-side scripting
+	</option><option value="3 : Why use client-side programming?">3 : Why use client-side programming?</option><option value="4 : 
+		What is JavaScript?
+	">4 : 
+		What is JavaScript?
+	</option><option value="5 : JavaScript vs. Java">5 : JavaScript vs. Java</option><option value="6 : JavaScript vs. PHP">6 : JavaScript vs. PHP</option><option value="7 : 
+		Event-driven programming
+	">7 : 
+		Event-driven programming
+	</option><option value="8 : 
+		Buttons:
+		&lt;button&gt;
+	">8 : 
+		Buttons:
+		&lt;button&gt;
+	</option><option value="9 : JavaScript functions">9 : JavaScript functions</option><option value="10 : 
+		A JavaScript statement:
+		alert
+	">10 : 
+		A JavaScript statement:
+		alert
+	</option><option value="11 : 
+		Linking to a JavaScript file:
+		script
+	">11 : 
+		Linking to a JavaScript file:
+		script
+	</option><option value="12 : Event handlers">12 : Event handlers</option><option value="13 : === 8.2: JavaScript Syntax ===">13 : === 8.2: JavaScript Syntax ===</option><option value="14 : 
+		Variables and types
+	">14 : 
+		Variables and types
+	</option><option value="15 : 
+		Number type
+	">15 : 
+		Number type
+	</option><option value="16 : 
+		String type
+	">16 : 
+		String type
+	</option><option value="17 : More about String">17 : More about String</option><option value="18 : 
+		Comments
+		(same as Java)
+	">18 : 
+		Comments
+		(same as Java)
+	</option><option value="19 : 
+		for loop
+		(same as Java)
+	">19 : 
+		for loop
+		(same as Java)
+	</option><option value="20 : 
+		Math object
+	">20 : 
+		Math object
+	</option><option value="21 : 
+		Logical operators
+	">21 : 
+		Logical operators
+	</option><option value="22 : 
+		if/else statement
+		(same as Java)
+	">22 : 
+		if/else statement
+		(same as Java)
+	</option><option value="23 : 
+		Boolean type
+	">23 : 
+		Boolean type
+	</option><option value="24 : 
+		while loops
+		(same as Java)
+	">24 : 
+		while loops
+		(same as Java)
+	</option><option value="25 : 
+		Arrays
+	">25 : 
+		Arrays
+	</option><option value="26 : 
+		Array methods
+	">26 : 
+		Array methods
+	</option><option value="27 : 
+		Splitting strings:
+		split and join
+	">27 : 
+		Splitting strings:
+		split and join
+	</option><option value="28 : Defining functions">28 : Defining functions</option><option value="29 : 
+		Special values: null and undefined
+	">29 : 
+		Special values: null and undefined
+	</option><option value="30 : 
+		Popup boxes
+	">30 : 
+		Popup boxes
+	</option><option value="31 : 
+		Document Object Model
+		(DOM)
+	">31 : 
+		Document Object Model
+		(DOM)
+	</option><option value="32 : 
+		DOM element objects
+	">32 : 
+		DOM element objects
+	</option><option value="33 : 
+		DOM object properties
+	">33 : 
+		DOM object properties
+	</option><option value="34 : DOM properties for form controls">34 : DOM properties for form controls</option><option value="35 : Accessing elements: document.getElementById">35 : Accessing elements: document.getElementById</option><option value="36 : 
+		Modifying text inside an element
+	">36 : 
+		Modifying text inside an element
+	</option><option value="37 : More advanced example">37 : More advanced example</option><option value="38 : Abuse of innerHTML">38 : Abuse of innerHTML</option><option value="39 : 
+		Adjusting styles with the DOM
+	">39 : 
+		Adjusting styles with the DOM
+	</option><option value="40 : Common DOM styling errors">40 : Common DOM styling errors</option><option value="41 : JavaScript in HTML body (example)">41 : JavaScript in HTML body (example)</option><option value="42 : Injecting Dynamic Text: document.write">42 : Injecting Dynamic Text: document.write</option><option value="43 : The typeof function">43 : The typeof function</option><option value="44 : The arguments array">44 : The arguments array</option><option value="45 : The &quot;for each&quot; loop">45 : The "for each" loop</option><option value="46 : Arrays as maps">46 : Arrays as maps</option><option value="47 : Date object">47 : Date object</option><option value="48 : The eval (evil?) function">48 : The eval (evil?) function</option><option value="49 : Debugging JS code">49 : Debugging JS code</option><option value="50 : JSLint">50 : JSLint</option><option value="51 : JavaScript &quot;strict&quot; mode">51 : JavaScript "strict" mode</option></select></div></div></form></div>
+			<div id="currentSlide" style="visibility: visible;"><span id="csHere">37</span> <span id="csSep">/</span> <span id="csTotal">51</span></div>
+			<div id="header"></div>
+			<div id="footer">
+				<h1>CSE3026: Web Application Development</h1>
+				<h2>08. JavaScript</h2>
+			</div>
+		</div>
+	
+		<div class="presentation">
+			<div class="slide" id="slide0" style="visibility: hidden;">			
+				<h1><span class="smallerFont">CSE3026: Web Application Development</span> <br> <strong>JavaScript</strong></h1>			
+				<br>
+				<h2>Scott Uk-Jin Lee</h2>
+							
+				<p class="license"> 				
+					Reproduced with permission of the authors.
+					Copyright 2012 Marty Stepp, Jessica Miller, and Victoria Kirst.
+					All rights reserved. 
+					Further reproduction or distribution is prohibited without written permission.
+				</p>
+				
+				<div class="w3c">
+					<a href="http://validator.w3.org/check/referer"><img src="./CSE3026 - 08. JavaScript_files/w3c-html.png" alt="Valid HTML 5"></a>
+					<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="./CSE3026 - 08. JavaScript_files/w3c-css.png" alt="Valid CSS!"></a>
+				</div>
+			</div>
+			
+			
+			
+<div class="slide titleslide" id="slide1" style="visibility: hidden;">
+	<h1>8.1: Key JavaScript Concepts</h1>
+
+	<ul>
+		<li>
+			<strong>8.1: Key JavaScript Concepts</strong>
+		</li>
+		<li>
+			8.2: JavaScript Syntax
+		</li>
+		<li>
+			8.3: Program Logic
+		</li>
+		<li>
+			8.4: Advanced JavaScript Syntax
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide2" style="visibility: hidden;">
+	<h1>
+		Client-side scripting
+	</h1>
+
+	<div class="centerfigure">
+		<img src="./CSE3026 - 08. JavaScript_files/figure_2_client_side_scripting.png" alt="client-side scripting" style="max-width: 50%">
+	</div>
+
+	<ul>
+		<li><span class="term">client-side script</span>: code runs in browser <em>after</em> page is sent back from server
+			<ul>
+				<li>often this code manipulates the page or responds to user actions</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide3" style="visibility: hidden;">
+	<h1>Why use client-side programming?</h1>
+
+	<p>
+		PHP already allows us to create dynamic web pages.  Why also use client-side scripting?
+	</p>
+
+	<ul>
+		<li>
+			client-side scripting (JavaScript) benefits:
+			<ul>
+				<li><span class="term">usability</span>: can modify a page without having to post back to the server (faster UI)</li>
+				<li><span class="term">efficiency</span>: can make small, quick changes to page without waiting for server</li>
+				<li><span class="term">event-driven</span>: can respond to user actions like clicks and key presses</li>
+			</ul>
+		</li>
+
+		<li>
+			server-side programming (PHP) benefits:
+			<ul>
+				<li><strong>security</strong>: has access to server's private data; client can't see source code</li>
+				<li><strong>compatibility</strong>: not subject to browser compatibility issues</li>
+				<li><strong>power</strong>: can write files, open connections to servers, connect to databases, ...</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide4" style="visibility: hidden;">
+	<h1>
+		What is JavaScript?
+	</h1>
+
+	<ul>
+		<li>a lightweight programming language ("scripting language")</li>
+		<li>used to make web pages interactive
+			<ul>
+				<li>insert dynamic text into HTML (ex: user name)</li>
+				<li>react to events (ex: page load user click)</li>
+				<li>get information about a user's computer (ex: browser type)</li>
+				<li>perform calculations on user's computer (ex: form validation)</li>
+			</ul>
+		</li>
+		<li>a <a href="http://www.webstandards.org/">web standard</a> (but not supported identically by <a href="http://en.wikipedia.org/wiki/Criticisms_of_Internet_Explorer#JavaScript_and_DOM">all browsers</a>)</li>
+		<li>NOT related to Java other than by name and some syntactic similarities</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide5" style="visibility: hidden;">
+	<h1>JavaScript vs. Java</h1>
+
+	<div class="rightfigure">
+		<img style="width: 100px" src="./CSE3026 - 08. JavaScript_files/java.jpg" alt="Java">
+		+
+		<img style="width: 100px" src="./CSE3026 - 08. JavaScript_files/cannabis.png" alt="mary jane, da endo, aight">
+		= JavaScript
+	</div>
+
+	<ul>
+		<li><span class="term">interpreted</span>, not compiled</li>
+		<li>more relaxed syntax and rules
+			<ul>
+				<li>fewer and "looser" data types</li>
+				<li>variables don't need to be declared</li>
+				<li>errors often silent (few exceptions)</li>
+			</ul>
+		</li>
+		<li>key construct is the <span class="term">function</span> rather than the class
+			<ul>
+				<li>"first-class" functions are used in many situations</li>
+			</ul>
+		</li>
+		<li>contained within a web page and integrates with its HTML/CSS content</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide6" style="visibility: hidden;">
+	<h1>JavaScript vs. PHP</h1>
+
+	<div class="rightfigure">
+		JS &lt;3
+		<img src="./CSE3026 - 08. JavaScript_files/php_logo.gif" alt="php" style="margin-right: 2em">
+	</div>
+
+	<ul>
+		<li>similarities:
+			<ul>
+				<li>both are <span class="term">interpreted</span>, not compiled</li>
+				<li>both are relaxed about syntax, rules, and types</li>
+				<li>both are case-sensitive</li>
+				<li>both have built-in regular expressions for powerful text processing</li>
+			</ul>
+		</li>
+
+		<li>differences:
+			<ul>
+				<li>JS is more object-oriented: <code>noun.verb()</code>, less procedural: <code>verb(noun)</code></li>
+				<li>JS focuses on UIs and interacting with a document; PHP on HTML output and files/forms</li>
+				<li>JS code runs on the client's browser; PHP code runs on the web server</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide7" style="visibility: hidden;">
+	<h1>
+		<a href="http://en.wikipedia.org/wiki/Event_driven_programming">Event-driven programming</a>
+	</h1>
+
+	<div class="centerfigure">
+		<img src="./CSE3026 - 08. JavaScript_files/figure_3_event.png" alt="event" style="max-width: 50%">
+	</div>
+
+	<ul>
+		<li>JS programs have no <code>main</code>; they respond to user actions called <span class="term">events</span></li>
+		<li><span class="term">event-driven programming</span>: writing programs driven by user events</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide8" style="visibility: hidden;">
+	<h1>
+		Buttons:
+		<a href="http://www.w3schools.com/tags/tag_button.asp"><code>&lt;button&gt;</code></a>
+	</h1>
+
+	<p class="description">
+		the canonical clickable UI control (inline)
+	</p>
+
+	<div class="example">
+		<pre class="examplecode html"><em>&lt;button&gt;</em>Click me!<em>&lt;/button&gt;</em>
+</pre>
+
+		<div class="exampleoutput insertoutput"><button>Click me!</button>
+</div>
+	</div>
+
+	<ul>
+		<li>button's text appears inside tag; can also contain images</li>
+
+		<li>To make a responsive button or other UI control:
+			<ol>
+				<li>choose the control (e.g. button) and event (e.g. mouse click) of interest</li>
+				<li>write a JavaScript function to run when the event occurs</li>
+				<li>attach the function to the event on the control</li>
+			</ol>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide9" style="visibility: hidden;">
+	<h1>JavaScript functions</h1>
+
+	<pre class="syntaxtemplate js">function <var>name</var>() {
+    <var>statement</var> ;
+    <var>statement</var> ;
+    ...
+    <var>statement</var> ;
+}
+</pre>
+
+	<pre class="examplecode js">function myFunction() {
+    alert("Hello!");
+    alert("How are you?");
+}
+</pre>
+
+	<ul>
+		<li>the above could be the contents of <code>example.js</code> linked to our HTML page</li>
+		<li>statements placed into functions can be evaluated in response to user events</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide10" style="visibility: hidden;">
+	<h1>
+		A JavaScript statement:
+		<a href="http://www.w3schools.com/js/js_popup.asp"><code>alert</code></a>
+	</h1>
+
+	<pre class="syntaxtemplate js">alert("<var>message</var>");
+</pre>
+
+	<div class="example">
+		<pre class="examplecode js">alert("IE6 detected.  Suck-mode enabled.");
+</pre>
+
+		<div class="exampleoutput">
+			<img src="./CSE3026 - 08. JavaScript_files/alert.png" alt="alert"> 
+		</div>
+	</div>
+
+	<ul>
+		<li>a JS command that pops up a dialog box with a message</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide11" style="visibility: hidden;">
+	<h1>
+		Linking to a JavaScript file:
+		<a href="http://www.w3schools.com/tags/tag_script.asp"><code>script</code></a>
+	</h1>
+
+	<pre class="syntaxtemplate html">&lt;script src="<var>filename</var>" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+
+	<pre class="examplecode html">&lt;script src="example.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+
+	<ul>
+		<li><code>script</code> tag should be placed in HTML page's <code>head</code></li>
+		<li>script code is stored in a separate <code>.js</code> file</li>
+		<li>JS code can be placed directly in the HTML file's <code>body</code> or <code>head</code> (like CSS)
+			<ul>
+				<li>but this is bad style (should separate content, presentation, and behavior)</li>
+			</ul>
+	</li></ul>
+</div>
+
+
+
+<div class="slide" id="slide12" style="visibility: hidden;">
+	<h1>Event handlers</h1>
+
+		<pre class="syntaxtemplate html">&lt;<var>element</var> <var>attributes</var> <em>onclick="<var>function</var>();"</em>&gt;...
+</pre>
+
+	<div class="example">
+		<pre class="examplecode html">&lt;button <em>onclick="myFunction();"</em>&gt;Click me!&lt;/button&gt;
+</pre>
+
+		<div class="exampleoutput insertoutput"><button onclick="myFunction();">Click me!</button>
+
+			<script type="text/javascript">
+				function myFunction() {
+					alert("Hello!");
+					alert("How are you?");
+				}
+			</script>
+		</div>
+	</div>
+
+	<ul>
+		<li>JavaScript functions can be set as <span class="term">event handlers</span>
+			<ul>
+				<li>when you interact with the element, the function will execute</li>
+			</ul>
+		</li>
+		<li><code><a href="http://www.w3schools.com/jsref/event_onclick.asp">onclick</a></code> is just one of many event HTML attributes we'll use</li>
+	</ul>
+
+	<hr>
+
+	<ul>
+		<li class="">
+			but popping up an <code>alert</code> window is disruptive and annoying
+			<ul>
+				<li>
+					A better user experience would be to have the message appear on the page...
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide titleslide" id="slide13" style="visibility: hidden;">
+	<h1>8.2: JavaScript Syntax</h1>
+
+	<ul>
+		<li>
+			8.1: Key JavaScript Concepts
+		</li>
+		<li>
+			<strong>8.2: JavaScript Syntax</strong>
+		</li>
+		<li>
+			8.3: Program Logic
+		</li>
+		<li>
+			8.4: Advanced JavaScript Syntax
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide14" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_variables.asp">Variables</a> and types
+	</h1>
+
+	<pre class="syntaxtemplate js">var <var>name</var> = <var>expression</var>;
+</pre>
+
+	<pre class="examplecode js">var age = 32;
+var weight = 127.4;
+var clientName = "Connie Client";
+</pre>
+
+	<ul>
+		<li>variables are declared with the <code>var</code> keyword (case sensitive)</li>
+		<li>types are not specified, but JS does have types ("loosely typed")
+			<ul>
+				<li><code>Number</code>, <code>Boolean</code>, <code>String</code>, <code>Array</code>, <code>Object</code>, <code>Function</code>, <code>Null</code>, <code>Undefined</code></li>
+				<li>can find out a variable's type by calling <a href="http://javascript.crockford.com/remedial.html"><code>typeof</code></a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide15" style="visibility: hidden;">
+	<h1>
+		<code>Number</code> type
+	</h1>
+
+	<pre class="examplecode js">var enrollment = 99;
+var medianGrade = 2.8;
+var credits = 5 + 4 + (2 * 3);
+</pre>
+
+	<ul>
+		<li>integers and real numbers are the same type (no <code>int</code> vs. <code>double</code>)</li>
+		<li>
+			same operators: <code>+ - * / % ++ -- = += -= *= /= %=</code>
+		</li>
+		<li>similar <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">precedence</a> to Java</li>
+		<li>many operators auto-convert types: <code>"2" * 3</code> is <code>6</code></li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide16" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/jsref/jsref_obj_string.asp"><code>String</code></a> type
+	</h1>
+
+	<pre class="examplecode js">var s = "Connie Client";
+var fName = s.<em>substring</em>(0, s.<em>indexOf</em>(" "));   <span class="comment">// "Connie"</span>
+var len = s.<em>length</em>;                           <span class="comment">// 13</span>
+var s2 = 'Melvin Merchant';                   <span class="comment">// can use "" or ' '</span>
+</pre>
+
+	<ul>
+		<li>methods:
+			<a href="http://www.w3schools.com/jsref/jsref_charAt.asp"><code>charAt</code></a>,
+			<a href="http://www.w3schools.com/jsref/jsref_charCodeAt.asp"><code>charCodeAt</code></a>,
+			<a href="http://www.w3schools.com/jsref/jsref_fromCharCode.asp"><code>fromCharCode</code></a>,
+			<a href="http://www.w3schools.com/jsref/jsref_indexOf.asp"><code>indexOf</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_lastIndexOf.asp"><code>lastIndexOf</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_replace.asp"><code>replace</code></a>,
+			<a href="http://www.w3schools.com/jsref/jsref_split.asp"><code>split</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_substring.asp"><code>substring</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_toLowerCase.asp"><code>toLowerCase</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_toUpperCase.asp"><code>toUpperCase</code></a>
+
+			<ul>
+				<li><code>charAt</code> returns a one-letter <code>String</code> (there is no <code>char</code> type)</li>
+			</ul>
+		</li>
+		<li><code>length</code> property (not a method as in Java)</li>
+		<li>
+			concatenation with <code>+</code> : <code>1</code> + 1 is <code>2</code>, but
+					<code>"1"</code> + 1 is <code>"11"</code>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide17" style="visibility: hidden;">
+	<h1>More about <code>String</code></h1>
+
+	<ul>
+		<li>
+			escape sequences behave as in Java:
+			<code>\' \" \&amp; \n \t \\</code>
+		</li>
+		<li>to convert between numbers and <code>String</code>s:
+			<pre class="examplecode js">var count = 10;
+var s1 = <em>"" +</em> count;                      <span class="comment">// "10"</span>
+var s2 = count <em>+</em> " bananas, ah ah ah!";   <span class="comment">// "10 bananas, ah ah ah!"</span>
+var n1 = <em>parseInt</em>("42 is the answer");    <span class="comment">// 42</span>
+var n2 = parseFloat("booyah");            <span class="comment">// <a href="http://www.w3schools.com/jsref/jsref_NaN.asp">NaN</a></span>
+</pre>
+		</li>
+		<li>to access characters of a <code>String</code>, use [<var>index</var>] or <code>charAt</code>:
+			<pre class="examplecode js">var firstLetter = s<em>[0]</em>;
+var firstLetter = s<em>.charAt(0)</em>;
+var lastLetter = <em>s.charAt(s.length - 1);</em>
+</pre>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide18" style="visibility: hidden;">
+	<h1>
+		Comments
+		<span class="sameasjava">(same as Java)</span>
+	</h1>
+
+	<pre class="syntaxtemplate js"><span class="comment">// <var>single-line comment</var>
+
+/* <var>multi-line comment</var> */</span>
+</pre>
+
+	<ul>
+		<li>identical to Java's comment syntax</li>
+		<li>recall: 4 comment syntaxes
+			<ul>
+				<li><span style="float: left; width: 8em">HTML:</span> <code>&lt;!-- <var>comment</var> --&gt;</code></li>
+				<li><span style="float: left; width: 8em">CSS/JS/PHP:</span> <code>/* <var>comment</var> */</code></li>
+				<li><span style="float: left; width: 8em">Java/JS/PHP:</span> <code>// <var>comment</var></code></li>
+				<li><span style="float: left; width: 8em">PHP:</span> <code># <var>comment</var></code></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide19" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_loop_for.asp"><code>for</code></a> loop
+		<span class="sameasjava">(same as Java)</span>
+	</h1>
+
+	<pre class="syntaxtemplate js">for (<var>initialization</var>; <var>condition</var>; <var>update</var>) {
+    <var>statements</var>;
+}
+</pre>
+
+	<pre class="examplecode js">var sum = 0;
+<em>for (var i = 0; i &lt; 100; i++) {</em>
+    sum = sum + i;
+<em>}</em>
+</pre>
+
+	<pre class="examplecode js">var s1 = "hello";
+var s2 = "";
+<em>for (var i = 0; i &lt; s.length; i++) {</em>
+    s2 += s1[i] + s1[i];
+<em>}</em>
+<span class="comment">// s2 stores "hheelllloo"</span>
+</pre>
+</div>
+
+
+
+<div class="slide" id="slide20" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/jsref/jsref_obj_math.asp">Math</a> object
+	</h1>
+
+	<pre class="examplecode js">var rand1to10 = <em>Math.floor</em>(<em>Math.random()</em> * 10 + 1);
+var three = <em>Math.floor</em>(<em>Math.PI</em>);
+</pre>
+
+	<ul>
+		<li>methods: 
+			<code><a href="http://www.w3schools.com/jsref/jsref_abs.asp">abs</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_ceil.asp">ceil</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_cos.asp">cos</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_floor.asp">floor</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_log.asp">log</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_max.asp">max</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_min.asp">min</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_pow.asp">pow</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_random.asp">random</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_round.asp">round</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_sin.asp">sin</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_sqrt.asp">sqrt</a></code>, 
+			<code><a href="http://www.w3schools.com/jsref/jsref_tan.asp">tan</a></code>
+		</li>
+		<li>properties:
+			<code>E</code>,
+			<code>PI</code>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide21" style="visibility: hidden;">
+	<h1>
+		Logical operators
+	</h1>
+
+	<ul>
+		<li>
+			<code>&gt; &lt; &gt;= &lt;= &amp;&amp; || ! == != <em>=== !==</em></code>
+		</li>
+		<li>
+			most logical operators automatically convert types:
+			<ul>
+				<li>
+					<code>5 &lt; "7"</code> is <code>true</code>
+				</li>
+				<li>
+					<code>42 == 42.0</code> is <code>true</code>
+				</li>
+				<li>
+					<code>"5.0" == 5</code> is <code>true</code>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<code>===</code> and <code>!==</code> are strict equality tests; checks both type and value
+			<ul>
+				<li>
+					<code>"5.0" === 5</code> is <code>false</code>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide22" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_if_else.asp"><code>if/else</code></a> statement
+		<span class="sameasjava">(same as Java)</span>
+	</h1>
+
+	<pre class="syntaxtemplate js">if (<var>condition</var>) {
+    <var>statements</var>;
+} else if (<var>condition</var>) {
+    <var>statements</var>;
+} else {
+    <var>statements</var>;
+}
+</pre>
+
+	<ul>
+		<li>identical structure to Java's <code>if/else</code> statement</li>
+		<li>JavaScript allows almost anything as a <var>condition</var></li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide23" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_booleans.asp">Boolean</a> type
+	</h1>
+
+	<pre class="examplecode js">var iLike3026 = true;
+var ieIsGood = "IE6" &gt; 0;   <span class="comment">// false</span>
+if ("web dev is great") {  <span class="comment">/* true */</span> }
+if (0) {  <span class="comment">/* false */</span> }
+</pre>
+
+	<ul>
+		<li>
+			any value can be used as a <code>Boolean</code>
+			<ul>
+				<li>
+					"falsey" values: <code>0</code>, <code>0.0</code>, <code>NaN</code>, <code>""</code>, <code>null</code>, and <code>undefined</code> 
+				</li>
+				<li>"truthy" values: anything else</li>
+			</ul>
+		</li>
+		<li>converting a value into a <code>Boolean</code> explicitly:
+			<ul>
+				<li><code>var boolValue = <em>Boolean(</em><var>otherValue</var><em>)</em>;</code></li>
+				<li><code>var boolValue = <em>!!</em>(<var>otherValue</var>);</code></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide24" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_loop_while.asp"><code>while</code></a> loops
+		<span class="sameasjava">(same as Java)</span>
+	</h1>
+
+	<pre class="syntaxtemplate js">while (<var>condition</var>) {
+    <var>statements</var>;
+}
+</pre>
+
+	<pre class="syntaxtemplate js">do {
+    <var>statements</var>;
+} while (<var>condition</var>);
+</pre>
+
+	<ul>
+		<li><code><a href="http://www.w3schools.com/js/js_break.asp">break</a></code> and <code>continue</code> keywords also behave as in Java</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide25" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_arrays.asp">Arrays</a>
+	</h1>
+
+	<pre class="syntaxtemplate js">var <var>name</var> = [];                          <span class="comment">// empty array</span>
+var <var>name</var> = [<var>value</var>, <var>value</var>, ..., <var>value</var>];   <span class="comment">// pre-filled</span>
+<var>name</var>[<var>index</var>] = <var>value</var>;                     <span class="comment">// store element</span>
+</pre>
+
+	<pre class="examplecode js">var ducks = ["Huey", "Dewey", "Louie"];
+
+var stooges = [];        <span class="comment">// stooges.length is 0</span>
+stooges[0] = "Larry";    <span class="comment">// stooges.length is 1</span>
+stooges[1] = "Moe";      <span class="comment">// stooges.length is 2</span>
+stooges[4] = "Curly";    <span class="comment">// stooges.length is 5</span>
+stooges[4] = "Shemp";    <span class="comment">// stooges.length is 5</span>
+</pre>
+
+	<ul>
+		<li>two ways to initialize an array</li>
+		<li><code>length</code> property (grows as needed when elements are added)</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide26" style="visibility: hidden;">
+	<h1>
+		Array <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">methods</a>
+	</h1>
+
+	<pre class="examplecode js">var a = ["Stef", "Jason"];   <span class="comment">// Stef, Jason</span>
+a.<em>push</em>("Brian");             <span class="comment">// Stef, Jason, Brian</span>
+a.<em>unshift</em>("Kelly");          <span class="comment">// Kelly, Stef, Jason, Brian</span>
+a.<em>pop</em>();                     <span class="comment">// Kelly, Stef, Jason</span>
+a.<em>shift</em>();                   <span class="comment">// Stef, Jason</span>
+a.<em>sort</em>();                    <span class="comment">// Jason, Stef</span>
+</pre>
+
+	<ul>
+		<li>array serves as many data structures: list, queue, stack, ...</li>
+		<li>methods:
+			<a href="http://www.w3schools.com/jsref/jsref_concat_array.asp"><code>concat</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_join.asp"><code>join</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_pop.asp"><code>pop</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_push.asp"><code>push</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_reverse.asp"><code>reverse</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_shift.asp"><code>shift</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_slice_array.asp"><code>slice</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_sort.asp"><code>sort</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_splice.asp"><code>splice</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_toString_array.asp"><code>toString</code></a>, 
+			<a href="http://www.w3schools.com/jsref/jsref_unshift.asp"><code>unshift</code></a>
+
+			<ul>
+				<li><code>pu<span class="slightemphasis">sh</span></code> and <code>pop</code> add / remove from back</li>
+				<li><code>unshift</code> and <code><span class="slightemphasis">sh</span>ift</code> add / remove from front</li>
+				<li><code>shift</code> and <code>pop</code> return the element that is removed</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide27" style="visibility: hidden;">
+	<h1>
+		Splitting strings:
+		<a href="http://www.w3schools.com/jsref/jsref_split.asp"><code>split</code></a> and <a href="http://www.w3schools.com/jsref/jsref_join.asp"><code>join</code></a>
+	</h1>
+
+	<pre class="examplecode js">var s = "the quick brown fox";
+var a = s.<em>split</em>(" ");          <span class="comment">// ["the", "quick", "brown", "fox"]</span>
+a.reverse();                   <span class="comment">// ["fox", "brown", "quick", "the"]</span>
+s = a.<em>join</em>("!");               <span class="comment">// "fox!brown!quick!the"</span>
+</pre>
+
+	<ul>
+		<li>
+			<code>split</code> breaks apart a string into an array using a delimiter
+			<ul>
+				<li>
+					can also be used with <span class="term">regular expressions</span> surrounded by <code>/</code>:
+					
+					<pre class="js">var a = s.split(<em>/[ \t]+/</em>);
+</pre>
+				</li>
+			</ul>
+		</li>
+		<li><code>join</code> merges an array into a single string, placing a delimiter between them</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide28" style="visibility: hidden;">
+	<h1>Defining functions</h1>
+
+	<pre class="syntaxtemplate js">function <var>name</var>() {
+    <var>statement</var> ;
+    <var>statement</var> ;
+    ...
+    <var>statement</var> ;
+}
+</pre>
+
+	<pre class="examplecode js">function myFunction() {
+    alert("Hello!");
+    alert("How are you?");
+}
+</pre>
+
+	<ul>
+		<li>the above could be the contents of <code>example.js</code> linked to our HTML page</li>
+		<li>statements placed into functions can be evaluated in response to user events</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide29" style="visibility: hidden;">
+	<h1>
+		Special values: <code>null</code> and <code>undefined</code>
+	</h1>
+
+	<pre class="examplecode js">var ned = null;
+var benson = 9;
+var caroline;
+
+<span class="comment">// at this point in the code,
+//   ned is null
+//   benson's 9
+//   caroline is undefined</span>
+</pre>
+
+	<ul>
+		<li><code>undefined</code> : has not been declared, does not exist</li>
+		<li><code>null</code> : exists, but was specifically assigned an empty or <code>null</code> value</li>
+		<li>Why does JavaScript have both of these?</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide30" style="visibility: hidden;">
+	<h1>
+		<a href="http://www.w3schools.com/js/js_popup.asp">Popup boxes</a>
+	</h1>
+
+	<pre class="syntaxtemplate js">alert("<var>message</var>");     <span class="comment">// message</span>
+confirm("<var>message</var>");   <span class="comment">// returns true or false</span>
+prompt("<var>message</var>");    <span class="comment">// returns user input string</span>
+</pre>
+
+	<div>
+		<img src="./CSE3026 - 08. JavaScript_files/alert.png" alt="alert" style="width: 30%"> 
+		<img src="./CSE3026 - 08. JavaScript_files/confirm.png" alt="confirm" style="width: 30%"> 
+		<img src="./CSE3026 - 08. JavaScript_files/prompt.png" alt="prompt" style="width: 30%">
+	</div>
+</div>
+
+
+<!--
+<div class="slide titleslide">
+	<h1>Event-Driven Programming with JavaScript</h1>
+
+	<ul>
+		<li>
+			<strong>8.1: Key JavaScript Concepts</strong>
+		</li>
+		<li>
+			8.2: JavaScript Syntax
+		</li>
+		<li>
+			8.3: Program Logic
+		</li>
+		<li>
+			8.4: Advanced JavaScript Syntax
+		</li>
+	</ul>
+</div>
+-->
+
+
+<div class="slide" id="slide31" style="visibility: hidden;">
+	<h1>
+		Document Object Model
+		(<a href="http://www.w3.org/TR/2004/PR-DOM-Level-3-Core-20040205/introduction.html">DOM</a>)
+	</h1>
+
+	<p class="description">
+		a set of JavaScript objects that represent each element on the page
+	</p>
+
+	<div class="rightfigure">
+		<img src="./CSE3026 - 08. JavaScript_files/dom.png" alt="DOM">
+	</div>
+
+	<ul>
+		<li>most JS code manipulates elements on an HTML page</li>
+		<li>we can examine elements' state
+			<ul>
+				<li>e.g. see whether a box is checked</li>
+			</ul>
+		</li><li>we can change state
+			<ul>
+				<li>e.g. insert some new text into a <code>div</code></li>
+			</ul>
+		</li>
+		<li>we can change styles
+			<ul>
+				<li>e.g. make a paragraph red</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide32" style="visibility: hidden;">
+	<h1>
+		DOM element objects
+	</h1>
+
+	<div class="figure">
+		<img src="./CSE3026 - 08. JavaScript_files/figure_5_dom.png" alt="dom object">
+	</div>
+
+	<ul>
+		<li>
+			every element on the page has a corresponding DOM object
+		</li>
+		<li>
+			access/modify the attributes of the DOM object with <code><var>objectName</var>.<var>attributeName</var></code>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide33" style="visibility: hidden;">
+	<h1>
+		DOM object properties
+	</h1>
+
+	<pre class="examplecode html compressed">&lt;div <em>id="main"</em> class="foo bar"&gt;
+    &lt;p&gt;Hello, &lt;em&gt;very&lt;/em&gt; happy to see you!&lt;/p&gt;
+    &lt;img <em>id="icon"</em> src="images/borat.jpg" alt="Borat" /&gt;
+&lt;/div&gt;
+</pre>
+
+	<pre class="examplecode js compressed">var mainDiv = document.getElementById("main");
+var icon    = document.getElementById("icon");
+</pre>
+
+	<table class="standard">
+		<tbody><tr class=" evenrow">
+			<th>
+				Property
+			</th>
+			<th>
+				Description
+			</th>
+			<th>
+				Example
+			</th>
+		</tr>
+
+		<tr>
+			<td>
+				<code>tagName</code>
+			</td>
+			<td>
+				element's HTML tag
+			</td>
+			<td>
+				<code>mainDiv.tagName</code> is <code>"DIV"</code>
+			</td>
+		</tr>
+
+		<tr class=" evenrow">
+			<td>
+				<code>className</code>
+			</td>
+			<td>
+				CSS classes of element
+			</td>
+			<td>
+				<code>mainDiv.className</code> is <code>"foo bar"</code>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<code>innerHTML</code>
+			</td>
+			<td>
+				content in element
+			</td>
+			<td>
+				<code>mainDiv.innerHTML</code> is <code>"\n &lt;p&gt;Hello, &lt;em&gt;ve...</code>
+			</td>
+		</tr>
+
+		<tr class=" evenrow">
+			<td>
+				<code>src</code>
+			</td>
+			<td>
+				URL target of an image
+			</td>
+			<td>
+				<code>icon.src</code> is <code>"images/borat.jpg"</code>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+
+<div class="slide" id="slide34" style="visibility: hidden;">
+	<h1>DOM properties for form controls</h1>
+
+	<div class="example">
+		<pre class="examplecode html">&lt;input <em>id="sid"</em> type="text" size="7" maxlength="7" /&gt;
+&lt;input <em>id="frosh"</em> type="checkbox" checked="checked" /&gt; Freshman?
+</pre>
+
+		<pre class="examplecode js compressed">var sid   = document.getElementById("sid");
+var frosh = document.getElementById("frosh");
+</pre>
+
+		<div class="exampleoutput insertoutput"><input id="sid" type="text" size="7" maxlength="7">
+<input id="frosh" type="checkbox" checked="checked"> Freshman?
+</div>
+	</div>
+
+	<table class="standard">
+		<tbody><tr class=" evenrow">
+			<th>
+				Property
+			</th>
+			<th>
+				Description
+			</th>
+			<th>
+				Example
+			</th>
+		</tr>
+
+		<tr>
+			<td>
+				<code>value</code>
+			</td>
+			<td>
+				the text/value chosen by the user
+			</td>
+			<td>
+				<code>sid.value</code> could be <code>"1234567"</code>
+			</td>
+		</tr>
+
+		<tr class=" evenrow">
+			<td>
+				<code>checked</code>
+			</td>
+			<td>
+				whether a box is checked
+			</td>
+			<td>
+				<code>frosh.checked</code> is <code>true</code>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<code>disabled</code>
+			</td>
+			<td>
+				whether a control is disabled (boolean)
+			</td>
+			<td>
+				<code>frosh.disabled</code> is <code>false</code>
+			</td>
+		</tr>
+
+		<tr class=" evenrow">
+			<td>
+				<code>readOnly</code>
+			</td>
+			<td>
+				whether a text box is read-only
+			</td>
+			<td>
+				<code>sid.readOnly</code> is <code>false</code>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+<!--
+<div class="slide">
+	<h1>More about form controls</h1>
+
+	<div class="example">
+		<pre class="examplecode html">
+&lt;select id=&quot;captain&quot;&gt;
+	&lt;option value=&quot;kirk&quot;&gt;James T. Kirk&lt;/option&gt;
+	&lt;option value=&quot;picard&quot;&gt;Jean-Luc Picard&lt;/option&gt;
+	&lt;option value=&quot;cisco&quot;&gt;Benjamin Cisco&lt;/option&gt;
+&lt;/select&gt;
+&lt;label&gt; &lt;input id=&quot;trekkie&quot; type=&quot;checkbox&quot; /&gt; I'm a Trekkie &lt;/label&gt;
+</pre>
+		<div class="exampleoutput insertoutput"></div>
+	</div>
+	
+	<ul>
+		<li>when talking to a text box or <code>select</code>, you usually want its <code>value</code></li>
+		<li>when talking to a checkbox or radio button, you probably want to know if it's <code>checked</code> (true/false)</li>
+	</ul>
+</div>
+-->
+
+
+<div class="slide" id="slide35" style="visibility: hidden;">
+	<h1>Accessing elements: <code>document.getElementById</code></h1>
+
+	<pre class="syntaxtemplate js">var <var>name</var> = document.getElementById("<var>id</var>");
+</pre>
+
+	<div class="example">
+		<pre class="examplecode html">&lt;button onclick="changeText();"&gt;Click me!&lt;/button&gt;
+&lt;input <em>id="output"</em> type="text" value="replace me" /&gt;
+</pre>
+
+		<pre class="examplecode examplecode2 js">function changeText() {
+    var textbox = <em>document.getElementById("output")</em>;
+    <em>textbox.value</em> = "Hello, world!";
+}
+</pre>
+
+		<div class="exampleoutput insertoutput"><button onclick="changeText();">Click me!</button>
+<input id="output" type="text" value="replace me">
+</div>
+	</div>
+
+	<ul>
+		<li>
+			<code>document.getElementById</code> returns the DOM object for an element with a given <code>id</code>
+		</li>
+		<li>
+			can change the text in most form controls by setting the <code>value</code> property
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide36" style="visibility: hidden;">
+	<h1>
+		Modifying text inside an element
+	</h1>
+
+<pre class="examplecode js">var paragraph = document.getElementById("welcome");
+<em>paragraph.innerHTML =</em> "Welcome to our site!";  <span class="comment">// change text on page</span>
+</pre>
+
+	<p>
+		DOM element objects have the following properties:
+	</p>
+
+	<ul>
+		<li><code>innerHTML</code> : text and/or HTML tags inside a node</li>
+		<li><code>textContent</code> : text (no HTML tags) inside a node
+			<ul>
+				<li>
+					simpler than <code>innerHTML</code>, but not supported in IE6
+				</li>
+			</ul>
+		</li>
+		<li><code>value</code> : the value inside a form control</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide37" style="visibility: visible;">
+	<h1>More advanced example</h1>
+
+	<div class="example">
+		<pre class="examplecode html">&lt;button onclick="swapText();"&gt;Click me!&lt;/button&gt;
+&lt;span <em>id="output2"</em>&gt;Hello&lt;/span&gt;
+&lt;input <em>id="textbox2"</em> type="text" value="Goodbye" /&gt;
+</pre>
+
+		<pre class="examplecode examplecode2 js">function swapText() {
+    var span = <em>document.getElementById("output2")</em>;
+    var textBox = <em>document.getElementById("textbox2")</em>;
+    var temp = <em>span.innerHTML</em>;
+    span.innerHTML = textBox.value;
+    textBox.value = temp;
+}
+</pre>
+
+		<div class="exampleoutput insertoutput"><button onclick="swapText();">Click me!</button>
+<span id="output2">Hello</span>
+<input id="textbox2" type="text" value="Goodbye">
+</div>
+	</div>
+
+	<ul>
+		<li>
+			can change the text inside most elements by setting the <code>innerHTML</code> property
+		</li>
+	</ul>
+</div>			
+
+
+
+<div class="slide" id="slide38" style="visibility: hidden;">
+	<h1>Abuse of <code>innerHTML</code></h1>
+
+<pre class="examplecode js badcode"><span class="comment">// bad style!</span>
+var paragraph = document.getElementById("welcome");
+paragraph.innerHTML = <em class="bad">"&lt;p&gt;text and &lt;a href="page.html"&gt;link&lt;/a&gt;"</em>;
+</pre>
+
+	<ul>
+		<li><code>innerHTML</code> can inject arbitrary HTML content into the page</li>
+		<li>however, this is prone to bugs and errors and is considered poor style</li>
+		<li>we forbid using <code>innerHTML</code> to inject HTML tags;  inject plain text only
+			<ul>
+				<li>(later, we'll see a better way to inject content with HTML tags in it)</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide39">
+	<h1>
+		Adjusting styles with the DOM
+	</h1>
+
+	<div class="example">
+		<pre class="examplecode html">&lt;button id="clickme"&gt;Color Me&lt;/button&gt;
+</pre>
+
+		<pre class="examplecode examplecode2 js">window.onload = function() {
+    document.getElementById("clickme").onclick = changeColor;
+};
+function changeColor() {
+    var clickMe = document.getElementById("clickme");
+    <em>clickMe.style.color = "red";</em>
+}
+</pre>
+
+		<div class="exampleoutput">
+			<button onclick="this.style.color = &#39;red&#39;;">Color Me</button>
+		</div>
+	</div>
+
+	<table class="standard">
+		<tbody><tr class=" evenrow">
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+
+		<tr>
+			<td>
+				<a class="popup" href="http://www.w3schools.com/HTMLDOM/dom_obj_style.asp" target="_blank"><code>style</code></a>
+			</td>
+			<td>
+				lets you set any CSS style property for an element
+			</td>
+		</tr>
+	</tbody></table>
+
+	<ul>
+		<li>contains same properties as in CSS, but with <code>camelCasedNames</code>
+			<ul>
+				<li>examples: <code>backgroundColor</code>, <code>borderLeftWidth</code>, <code>fontFamily</code></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide40">
+	<h1>Common DOM styling errors</h1>
+
+	<ul>
+		<li>many students forget to write <code>.style</code> when setting styles
+
+			<pre class="examplecode js">var clickMe = document.getElementById("clickme");
+<del>clickMe.color = "red";</del>
+clickMe<em>.style</em>.color = "red";
+</pre>
+		</li>
+
+		<li>style properties are capitalized <code>likeThis</code>, not <code>like-this</code>
+
+			<pre class="examplecode js"><del>clickMe.style.font-size = "14pt";</del>
+clickMe.style.<em>fontSize</em> = "14pt";
+</pre>
+		</li>
+
+		<li>style properties must be set as strings, often with units at the end
+
+			<pre class="examplecode js"><del>clickMe.style.width = 200;</del>
+clickMe.style.width = <em>"200px"</em>;
+clickMe.style.padding = <em>"0.5em"</em>;
+</pre>
+						
+			<ul>
+				<li>write exactly the value you would have written in the CSS, but in quotes</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<!--
+<div class="slide">
+	<h1>COMMON BUG: incorrect units on styles</h1>
+
+	<pre class="examplecode js">
+theDiv.style.left = x;   <span class="comment">// BAD! should be x + "px"</span>
+theDiv.style.backgroundPosition = x + "px" + y + "px";    <span class="comment">// BAD! missing space</span>
+</pre>
+
+	<ul>
+		<li>all CSS property values must be Strings, and many require units and/or a specific format</li>
+		<li><span class="term">Manifestation of bug</span>: code fails silently; style is not set</li>
+		<li><span class="term">Detection</span>: use Firebug debugger, step through code and look at <code>style</code></li>
+		<li><span class="term">Detection</span>: use an <code>alert</code> immediately after style property is set
+
+			<pre class="examplecode js">
+theDiv.style.left = 100;   <span class="comment">// BAD!</span>
+<span class="emphasizedcode">alert(&quot;div left is &quot; + theDiv.style.left);</span>
+</pre>
+
+		</li>
+	</ul>
+</div>
+-->
+
+
+
+<div class="slide" id="slide41">
+	<h1>JavaScript in HTML <code>body</code> (<a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto_body">example</a>)</h1>
+
+	<pre class="example html"><em>&lt;script type="text/javascript"&gt;</em>
+    <var>JavaScript code</var>
+<em>&lt;/script&gt;</em>
+</pre>
+
+	<ul>
+		<li>JS code can be embedded within your HTML page's <code>head</code> or <code>body</code></li>
+		<li>runs as the page is loading</li>
+
+		<li>this is considered <em>bad style</em> and shouldn't be done in this course
+			<ul>
+				<li>mixes HTML content and JS scripts (bad)</li>
+				<li>can cause your page not to validate</li>
+			</ul>
+		</li>
+	</ul>
+
+</div>
+
+
+
+<div class="slide" id="slide42">
+	<h1>Injecting Dynamic Text: <code>document.write</code></h1>
+
+	<pre class="example js">document.write("<var>message</var>");
+</pre>
+
+	<ul>
+		<li>prints specified text into the HTML page</li>
+		<li>this is very bad style; this is how newbs program JavaScript:
+			<ul>
+				<li>putting JS code in the HTML file's <code>body</code></li>
+				<li>having that code use <code>document.write</code></li>
+
+				<li>(this is awful style and a poor substitute for server-side PHP programming, which we'll learn later)</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide43">
+	<h1>The <code>typeof</code> function</h1>
+
+	<pre class="example js">typeof(<var>value</var>)
+</pre>
+
+	<ul>
+		<li>given these declarations:
+			<ul>
+				<li><code>function foo() { alert("Hello"); }</code></li>
+				<li><code>var a = ["Huey", "Dewey", "Louie"];</code></li>
+
+			</ul>
+		</li>
+	</ul>
+
+	<ul>
+		<li>The following statements are <code>true</code>:
+			<ul>
+				<li><code>typeof(3.14) === "number"</code></li>
+
+				<li><code>typeof("hello") === "string"</code></li>
+				<li><code>typeof(true) === "boolean"</code></li>
+				<li><code>typeof(foo) === "function"</code></li>
+				<li><code>typeof(a) === <em>"object"</em></code></li>
+				<li><code>typeof(null) === <em>"object"</em></code></li>
+
+				<li><code>typeof(undefined) === "undefined"</code></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide44">
+
+	<h1>The <code>arguments</code> array</h1>
+
+	<pre class="example js">function example() {
+    for (var i = 0; i &lt; <em>arguments</em>.length; i++) {
+        alert(<em>arguments[i]</em>);
+    }
+}
+</pre>
+
+	<pre class="js">example("how", "are", "you");   <span class="comment">// alerts 3 times</span>
+</pre>
+
+	<ul>
+		<li>every function contains an array named <code>arguments</code> representing the parameters passed</li>
+
+		<li>can loop over them, print/alert them, etc.</li>
+		<li>allows you to write functions that accept varying numbers of parameters</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide45">
+	<h1>The "<a href="http://www.w3schools.com/js/js_loop_for.asp">for each</a>" loop</h1>
+
+	<pre class="example js">for (var <var>name</var> in <var>arrayOrObject</var>) {
+    <var>do something with arrayOrObject</var>[<var>name</var>];
+}
+</pre>
+
+	<ul>
+		<li>loops over every index of the array, or every property name of the object</li>
+
+		<li>using this is actually discouraged, for reasons we'll see later</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide46">
+	<h1>Arrays as maps</h1>
+
+	<pre class="example js">var map = [];
+map[42] = "the answer";
+map[3.14] = "pi";
+map["champ"] = "suns";
+
+</pre>
+
+	<ul>
+		<li>the indexes of a JS array need not be integers!</li>
+		<li>this allows you to store <em>mappings</em> between an index of any type ("keys") and value</li>
+		<li>similar to Java's <code>Map</code> collection or a hash table data structure</li>
+
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide47">
+	<h1><a href="http://www.w3schools.com/jsref/jsref_obj_date.asp">Date</a> object</h1>
+
+	<pre class="example js">var today = <em>new Date()</em>;               <span class="comment">// today</span>
+
+var midterm = <em>new Date(2007, 4, 4)</em>;   <span class="comment">// May 4, 2007</span>
+</pre>
+
+	<hr>
+
+	<ul>
+		<li>methods
+			<ul>
+				<li>
+
+					<code><a href="http://www.w3schools.com/jsref/jsref_getDate.asp">getDate</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getDay.asp">getDay</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getMonth.asp">getMonth</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getFullYear.asp">getFullYear</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getHours.asp">getHours</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getMinutes.asp">getMinutes</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getSeconds.asp">getSeconds</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getMilliseconds.asp">getMilliseconds</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getTime.asp">getTime</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_getTimezoneOffset.asp">getTimezoneOffset</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_parse.asp">parse</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setDate.asp">setDate</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setMonth.asp">setMonth</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setFullYear.asp">setFullYear</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setHours.asp">setHours</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setMinutes.asp">setMinutes</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setSeconds.asp">setSeconds</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setMilliseconds.asp">setMilliseconds</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_setTime.asp">setTime</a></code>, 
+					<code><a href="http://www.w3schools.com/jsref/jsref_tostring_date.asp">toString</a></code>
+
+				</li>
+			</ul>
+		</li>
+		<li>quirks
+			<ul>
+				<li><code>getYear</code> returns a 2-digit year; use <code>getFullYear</code> instead</li>
+
+				<li><code>getDay</code> returns day of week from 0 (Sun) through 6 (Sat)</li>
+				<li><code>getDate</code> returns day of month from 1 to (# of days in month)</li>
+				<li><code>Date</code> stores month from 0-11 (not from 1-12)</li>
+			</ul>
+
+		</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide48">
+	<h1>The <a href="http://www.w3schools.com/jsref/jsref_eval.asp"><code>eval</code> </a>(evil?) function</h1>
+				
+	<pre class="example js">eval("<var>JavaScript code</var>");
+</pre>
+
+<pre class="js">eval("var x = 7; x++; alert(x / 2);");  <span class="comment">// alerts 4</span>
+</pre>
+
+	<hr class="spacedrule">
+
+	<img src="./CSE3026 - 08. JavaScript_files/drevil.png" alt="Dr. Evil" style="float: right; margin-left: 1em">
+
+	<ul>
+		<li><code>eval</code> treats a String as JavaScript code and runs that code</li>
+
+		<li>this is occasionally useful, but usually a very <em>bad idea</em>
+			<ul>
+				<li>if the string's contents come from user input, the user can cause arbitrary code execution</li>
+				<li>can lead to security problems and bugs</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+			
+			
+			
+<div class="slide" id="slide49">
+	<h1>Debugging JS code</h1>
+
+	<!--
+	<div class="rightfigure">
+		<img src="images/chrome_js.png" alt="Chrome JS" style="float: right; margin-left: 1em"/>
+	</div>
+	-->
+	<ul>
+		<li>Firebug/Chrome JS debugger can set breakpoints, step through code, examine values (Script tab)</li>
+		<li>interactive console for typing in arbitrary JS expressions (Console tab)</li>
+	</ul>
+	<div>
+		<img src="./CSE3026 - 08. JavaScript_files/firebug_js.png" alt="Firebug JS" style="max-width: 90%">	
+	</div>
+		
+</div>
+
+
+
+<div class="slide" id="slide50">
+	<h1>JSLint</h1>
+    
+    <img src="./CSE3026 - 08. JavaScript_files/jslint.png" alt="JSLint" style="float: right; margin-left: 1em; max-width: 50%">
+    <!-- 
+	<div class="rightfigure">
+		<img src="images/jslint.png" alt="JSLint" />
+	</div>
+    -->
+	<ul>
+		<li><span class="term">JSLint</span>: an analyzer that checks your JS code, much like a compiler, and points out common errors
+			<ul>
+				<li><a href="http://selab.hanyang.ac.kr/courses/cse326/2017/JSLint/">CSE3026 version</a> (recommended)</li>
+				<li><a href="http://www.jslint.com/">original version</a>, by Douglas Crockford of Yahoo!</li>
+			</ul>
+		</li>
+		<li>when your JS code doesn't work, paste it into JSLint first to find many common problems</li>
+	</ul>
+</div>
+
+
+
+<div class="slide" id="slide51">
+	<h1>JavaScript "strict" mode</h1> 
+	
+	<!--
+	<div class="rightfigure">
+		<img src="images/js-use-strict.png" alt="screenshot" />
+	</div>
+	-->
+	
+	<pre class="examplecode js">"use strict";
+
+<var>your code...</var>
+</pre>
+    
+    <img src="./CSE3026 - 08. JavaScript_files/js-use-strict.png" alt="screenshot" style="float: right; margin-left: 1em; max-width: 50%">
+    
+	<ul>
+		<li>writing <code>"use strict";</code> at the very top of your JS file turns on strict syntax checking:
+			<ul>
+				<li>shows an error if you try to assign to an undeclared variable</li>
+				<li>stops you from overwriting key JS system libraries</li>
+				<li>forbids some unsafe or error-prone language features</li>
+			</ul>
+		</li>
+		<li>You should <em>always</em> turn on strict mode for your code in this class!</li>
+	</ul>
+</div>
+
+
+		</div><!-- end div class="presentation" -->
+	
+		
+</body></html>

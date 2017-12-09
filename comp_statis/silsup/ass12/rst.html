@@ -1,0 +1,118 @@
+<!DOCTYPE <!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>asd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  body{
+    padding:0px;
+    maring:0px;
+  }
+    table.cont{
+      width:100vw;
+      height: 100vh;
+      margin:0px;
+      padding:0px;
+    }
+    table.cont tr{
+      width:100vw;
+      height: 50vh;
+    }
+    table.cont td{
+      width: 50%;
+      height: inherit;
+      text-align: center;
+    }
+  </style>
+  <style>
+.pdfobject-container { height: 100vh;}
+.pdfobject { height:100vh; }
+section{
+  height:100vh;
+  width:100vw;
+  font-size: 7pt;
+  text-align: center;
+
+}
+
+section td:first-child,section thead tr:first-child{
+  background-color: #673AB7;
+  color:white;
+}
+section tr:nth-child(2n+2){
+  border-collapse: collapse;
+  background-color: rgba(128,128,128,0.3);
+}
+</style>
+</head>
+<body>
+  <table class="cont">
+    <tr>
+      <td>
+        <p>
+          2017학년도 어느 한 고등학교에서 치뤄진 6월 모의고사에서 국어A형을 치룬 1000명의 학생들의 점수를 100점만점으로 채점한 데이터이다
+        이 점수 데이터가 정규분포를 따르는지 확인해라</p>
+        <img />
+      </td>
+      <td id="rstgrp" rowspan=2>
+
+      </td>
+    </tr>
+    <tr>
+      <td id="editor">
+#! /usr/bin/env Rscript
+x <- sample(100,1000,replace=TRUE);
+xt <- matrix(x,20,50);
+write.csv(xt,file="./sample.csv");
+y <- dnorm(x,mean(x),sd(x));
+pdf("./rst.pdf");
+plot(x,y);
+      </td>
+      <td>
+
+      </td>
+    </tr>
+  </table>
+  <section id="CSVTable">
+
+  </section>
+  <script src="js/pdfobject.min.js"></script>
+  <script>PDFObject.embed("./rst.pdf", "#rstgrp");</script>
+  <script src="js/ace.js"></script>
+  <script>
+        var editor = ace.edit("editor");
+          editor.setTheme("ace/theme/github");
+          editor.session.setMode("ace/mode/r");
+  </script>
+  <script>
+  function readTextFile(file)
+  {
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = function ()
+      {
+          if(rawFile.readyState === 4)
+          {
+              if(rawFile.status === 200 || rawFile.status == 0)
+              {
+                  var allText = rawFile.responseText;
+                  document.getElementById("editor").innerHTML = allText;
+              }
+          }
+      }
+      rawFile.send(null);
+  }
+  //readTextFile("ass12.R");
+  </script>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.csvToTable.js"></script>
+
+<script>
+$(function() {
+  $('#CSVTable').CSVToTable('sample.csv');
+});
+</script>
+</body>
+</html>

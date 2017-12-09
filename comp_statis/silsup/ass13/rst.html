@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>asd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href='http://fonts.googleapis.com/earlyaccess/jejuhallasan.css' rel='stylesheet' type='text/css'>
+  <style>
+  body{
+    position: relative;
+    padding:0px;
+    maring:0px;
+  }
+    table.cont{
+      width:100vw;
+      height: 100vh;
+      margin:0px;
+      padding:0px;
+    }
+    table.cont tr{
+      width:100vw;
+      height: 50vh;
+    }
+    table.cont td{
+      width: 50%;
+      height: inherit;
+      text-align: center;
+    }
+    .full-image{
+      height:100%;
+      width:100%;
+    }
+    dt{
+      cursor: pointer;
+    }
+    #nameboard{
+      position: absolute;
+      display:inline-block;
+      padding:0.3em;
+      z-index: 100;
+      left: 1vw;
+      top: 0.5vh;
+      border: 2px solid red;
+    border-radius: 12px;
+    }
+    #nameboard p{
+      margin:0px;
+      margin-top: 0.5vh;
+      margin-left: 0.5vw;
+    }
+    #nameboard p span{
+      @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+      font-family: 'Jeju Hallasan', Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="nameboard">
+    <p>
+      [13주차][2016004011][황세현]<span>통계학실습</span>
+    </p>
+    <!--
+      [13주차][2016004011][황세현]통계학실습
+    -->
+    <p>
+      소프트웨어 융합대학 컴퓨터 전공
+    </p>
+    <p>
+      황세현( <span>2016004011</span> )
+    </p>
+  </div>
+  <table class="cont">
+    <tr>
+      <td>
+        <dl>
+          <dt onclick="printPage()">
+            가설:
+          </dt>
+          <dd>
+            차의 Price와 Length는 연관이 있다.
+          </dd>
+        </dl>
+      </td>
+      <td >
+        <img class="full-image" alt="result" src="rst.png" />
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left;" id="editor">#! /usr/bin/env Rscript
+library(MASS);
+summary(Cars93);
+car.data = table(Cars93$Price, Cars93$Length);
+chisq.test(car.data);
+
+      </td>
+      <td>
+        <ol type="I">
+          <li>
+            결과를 보면, p-value가 0.0248으로 0.05보다 작다.
+          </li>
+          <li>
+            p-value가 0.05보다 작은 경우, 귀무가설을 기각할 수 있다.
+          </li>
+          <li>
+            따라서 차의 Price와 Length는 연관이 있다.
+          </li>
+        </ol>
+      </td>
+    </tr>
+  </table>
+  <script src="js/ace.js"></script>
+  <script src="js/mode-r.js"></script>
+  <script>
+        var editor = ace.edit("editor");
+          editor.setTheme("ace/theme/xcode");
+          editor.session.setMode("ace/mode/r");
+          console.log("set");
+  </script>
+  <script>
+  function readTextFile(file)
+  {
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = function ()
+      {
+          if(rawFile.readyState === 4)
+          {
+              if(rawFile.status === 200 || rawFile.status == 0)
+              {
+                  var allText = rawFile.responseText;
+                  document.getElementById("editor").innerHTML = allText;
+              }
+          }
+      }
+      rawFile.send(null);
+  }
+  //readTextFile("ass12.R");
+  </script>
+  <script>
+    function printPage(){
+      window.print();
+    }
+  </script>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</body>
+</html>

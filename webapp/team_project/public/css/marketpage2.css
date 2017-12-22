@@ -1,0 +1,468 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+.demo{
+   
+}
+.demo:nth-child(odd){
+    background-color: cyan;
+}
+.demo:nth-child(even){
+    background-color: magenta;
+}
+.full-width-button-with-padding{
+    width: 96%;
+    margin-left: 2%;
+    margin-top:1em;
+    height: 2em;
+    border:none;
+    background-color:#3949AB;
+    color:white;
+    border-radius: 5px;
+}
+.full-width-button-with-padding:hover{
+    background-color:#304FFE;
+}
+.full-width-button-with-padding:focus{
+    outline:0;
+}
+div.course-content-view-wrapper{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+   
+}
+
+div.course-content-view-toolbar{
+    height: 2.5em;
+    position: relative;
+    margin-bottom: 0.5em;
+    
+}
+.course-content-view-toolbar > .course-content-view-toolbar-left-pad,.course-content-view-toolbar > .course-content-view-toolbar-right-pad{
+    height: 100%;
+    width: 1em;
+    margin: 0px;
+    padding:0px;
+    background-color: #F4511E;
+    position: absolute;
+    display:inline-block;
+}
+.course-content-view-toolbar > .course-content-view-toolbar-left-pad{
+
+}
+.course-content-view-toolbar-left-pad > div{
+    border-top-right-radius: 100%;
+    height: 100%;
+    width:1em;
+    background-color: white;
+    
+}
+.course-content-view-toolbar > .course-content-view-toolbar-right-pad{
+    left: calc(100% - 1em);
+}
+
+.course-content-view-toolbar > .course-content-view-toolbar-container{
+    display:inline-block;
+    height: 100%;
+    width:calc(100% - 1em);
+    overflow: hidden;
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    position: relative;
+    margin: 0px;
+    margin-left:1em;
+    padding:0px;
+    background-color: #F4511E;
+    color:white;
+}
+.course-content-view-toolbar-button{
+    background:none;
+    color:white;
+    border:none;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 98%;
+    line-height: 1em;
+    font-size: 10pt;
+}
+.course-content-view-toolbar-button:hover{
+    background-color:rgba(200,200,200,0.3);
+    border-radius: 3px;
+}
+.course-content-view-toolbar-button span{
+    font-size: 12pt;
+    vertical-align: middle;
+}
+div.course-content-view{
+    position: relative;
+    height: calc(100% - 2.5em - 0.5em);
+    width:100%;
+    overflow-y: scroll;
+}
+div.course-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 15em;
+}
+body > footer{
+    position: fixed;
+    z-index: 100;
+    background-color:gray;
+    height: 2.5em;
+    color: white;
+}
+article.course-item .shopname{
+    background-color: #FF5E00;
+    color: white;
+    text-align:center;
+    line-height:2.5em;
+    height: 2.5em;
+    font-size: 17px;
+    font-weight: bold;
+   
+    margin-bottom: 10px;
+}
+article.course-item .html {
+	background-color: #FF7F27;
+}
+article.course-item .css {
+	background-color: #35CDFF;
+}
+article.course-item .js {
+	background-color: #FFC90E;
+}
+article.course-item .php {
+	background-color: #7092BE;
+}
+article.course-item{
+    margin: 0.4em;
+    overflow: hidden;
+    border-radius: 0.2em;
+    background-color:#cecece;
+}
+article.course-item .shopcont ul{
+    margin: 0px;
+}
+article.course-item .shopcont{
+    overflow-y:scroll;
+    height: calc(14.25em - 0.8em - 2.5em - 2em);
+}
+article.course-item > footer{
+
+    height:2em;
+}
+article.course-item > footer > *{
+    height:inherit;
+}
+.expectation-view{
+    height:6.5em;
+    padding-left:0.7em;
+    padding-right:0.7em;
+}
+.expectation-view table{
+    width:100%;
+    height: 6.5em;
+}
+.expectation-view td{
+    text-align: right;
+}
+.shopcart{
+    margin-top:0.4em;
+    margin-bottom:0.4em;
+    background-color: #eee;
+    border-radius: 1em;
+    overflow: hidden;
+    
+}
+.shopcart-list{
+    height:calc(100% - 6.5em - 1.5em - 2em - 0.8em);
+    overflow-y: scroll;
+    min-height: 5em;
+    padding-left:0.7em;
+    padding-right:0.7em;
+}
+.shopcart-list ul{
+    padding: 0px;
+    margin:0px;
+}
+.shopcart-list ul > li:nth-last-child(n+2){
+    border-bottom: 1px solid black;
+}
+.shopcart-title{
+    text-align: center;
+
+    background-color: orange;
+    height: 1.5em;
+    line-height: 1.5em;
+}
+.shopcart-controller{
+    background-color: orange;
+    height: 2em;
+    overflow-y: hidden;
+}
+.shopcart-controller button{
+    height: 100%;
+    background-color:orange;
+    
+    
+}
+div.detail-content-popup{
+    z-index: 70;
+    position: absolute;
+    height:100%;
+    width:100%;
+   
+    
+}
+div.detail-content-popup > .detail-content-container{
+    position: relative;
+    height:70%;
+    width:70%;
+    left: 15%;
+    top:15%;
+    background-color: white;
+    box-shadow: 2px 1px 50px #888888;
+}
+.detail-content-container > header{
+    background-color:#6D4C41;
+    color:white;
+    height: 2em;
+    line-height: 2em;
+    padding:0.5em;
+}
+.detail-content-container > section{
+    width:100%;
+    height: calc(100% - 3em - 2em);
+    overflow-y: scroll;
+}
+.detail-content-container > section > table{
+    width: 100%;
+    height: 100%;
+    min-height: 7em;
+}
+.detail-content-container > section > table  td:first-child{
+    padding-left: 3em;
+}
+.detail-content-container > footer{
+    height: 2em;
+    position: relative;
+    background-color:#8D6E63;
+}
+.shopcart-controller button:hover:enabled{
+    height: 100%;
+    background-color:#EF6C00;
+}
+span.btn-remove-cart-item{
+    float:right;
+    cursor:pointer;
+}
+span.btn-remove-cart-item:hover{
+    border-radius: 100%;
+    background-color:rgba(128,128,128,0.3);
+}
+.msg2{
+    margin:auto;
+    z-index: 120;
+    display:block;
+    position: absolute;
+    text-align: right;
+    min-height:2em;
+    width:calc(100% - 0.7em);
+  }
+  .balloon2 {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      background: #ccc;
+      min-height: 10em;
+      max-height: calc(100vh - 8em);
+      width: 50%;
+      margin: 11px auto;
+      border: 1px solid rgb(201, 13, 154);
+     margin-right:0.5em;
+      border-radius: 5px;
+  }
+  .balloon2-wrapper{
+      border-radius: inherit;
+      overflow: hidden;
+      display:inline-block;
+      position: relative;
+      min-height: 5em;
+        height: calc(50vh - 8em);
+      max-height: calc(100vh - 8em);
+      width:100%;
+        background-color:cyan;
+  }
+  .balloon2:after {
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid #ccc;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    top:-9px;
+    left: calc(100% - 1.5em);
+}
+.balloon2:before {
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid #999;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    top:-11px;
+    left: calc(100% - 1.5em);
+}
+button.footer-btn{
+    height: 80%;
+    width:30%;
+    position: relative;
+    background-color:#0097A7;
+    margin-top:0.3em;
+    margin-right:0.5em;
+    color:white;
+    border-radius: 4px;
+}
+button.footer-btn:not(:disabled):hover{
+    color:black;
+    background-color:#00BCD4;
+}
+button.footer-btn:focus{
+    outline: 0;
+}
+@media screen and (max-width:767.4px){ 
+    section.content-view{
+        display: block;
+        padding-top:4em;
+        height: calc( 100vh - 4em - 2.5em);
+    }
+   /* div.course-container{
+        display: block;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        flex-flow: nowrap !important;
+    }
+    */
+    
+   /* article.course-item{
+
+        display:block;
+        overflow: hidden;
+        min-height: 5em;
+    }
+    */
+    body > footer{
+       width: 100vw;
+        
+    }
+    div.course-container{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    div.detail-content-popup > .detail-content-container{
+        height:88%;
+        width:88%;
+        left: 6%;
+        top:6%;
+    }
+    .course-content-view-toolbar-right-pad > div{
+        border-top-left-radius: 100%;
+        height: 100%;
+        width:1em;
+        background-color: white;
+    }
+    .course-content-view-toolbar > .course-content-view-toolbar-container{
+        
+        width:calc(100% - 2em);
+    }
+    input#shopcartmobile:not(:checked) + .shopcart{
+        display: none !important;
+        visibility: hidden !important;
+    }
+    input#shopcartmobile:checked + .shopcart{
+        position: absolute;
+        width: 80%;
+        z-index: 80;
+        height: calc(80% - 2.5em);
+        left: 10%;
+        top: calc(10% + 2.5em);
+        box-shadow: 0.5em 0.3em 50px #888888;
+    }
+    .shopcart-list{
+        height: calc(100% - 6.5em - 1.5em - 2em);
+    }
+}/*end mobile media*/
+@media screen and (min-width:767.5px){ 
+    section.content-view{
+        width:88vw;
+        margin-top: 4em;
+        margin-left:6vw;
+
+        height: calc( 99vh - 4em - 2.5em);
+    }
+    .market-list-view{
+        overflow: scroll;
+    }
+    body > footer{
+        width: 88vw;
+        left: 6vw;
+
+     }
+     .course-content-view-toolbar-right-pad{
+        display: none;
+        visibility: hidden;
+        
+    }
+    .course-container{
+        padding-left:1em;
+    }
+}/*end desktop media*/
+@media screen and (min-width: 767.4px) and (max-width:991.4px){
+    div.course-container{
+        flex-flow: row wrap;
+    }
+    article.course-item{
+        display:inline-block;
+    }
+    div.course-container{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    div.detail-content-popup > .detail-content-container{
+        height:80%;
+        width:80%;
+        left: 10%;
+        top:10%;
+    }
+}/*md media*/
+@media screen and (min-width: 991.5px) and (max-width:1199.4px){
+    .market-list-view{
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    div.course-container{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        flex-flow: nowrap !important;
+    }
+    article.course-item{
+        min-width: 10em;
+        display:inline-block;
+    }
+    div.course-container{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}/* lg media*/
+@media screen and (min-width: 1199.5px) and (max-width:1400.4px){
+    div.course-container{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}/* xlg media*/
+@media screen and (min-width: 1400.5px){
+    div.course-container{
+        display:grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}/* xlg media*/

@@ -1,0 +1,484 @@
+.flex-layout {
+    display: -webkit-flex;
+    display:inline-flex;
+}
+.flex-layout-horizontal{
+    flex-direction: row;
+}
+.flex-layout-vertical{
+    flex-direction: column;
+}
+.flex-layout-horizontal-reverse{
+    flex-direction: row-reverse;
+}
+@media screen and (max-width:543px){
+    .flex-layout-xsm {
+        display: -webkit-flex;
+        display:inline-flex;
+    }
+    .flex-layout-xsm-horizontal{
+        flex-direction: row;
+    }
+    .flex-layout-xsm-vertical{
+        flex-direction: column;
+    }
+    .flex-layout-xsm-horizontal-reverse{
+        flex-direction: row-reverse;
+    }
+    .flex-item-xsm-lv1{
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */ 
+        flex: 1;
+    }
+    .flex-item-xsm-lv2{
+        -webkit-flex: 2; /* Safari 6.1+ */
+        -ms-flex: 2; /* IE 10 */ 
+        flex: 2;
+    }
+    .flex-item-xsm-lv3{
+        -webkit-flex: 3; /* Safari 6.1+ */
+        -ms-flex: 3; /* IE 10 */ 
+        flex: 3;
+    }
+    .flex-item-xsm-lv4{
+        -webkit-flex: 4; /* Safari 6.1+ */
+        -ms-flex: 4; /* IE 10 */ 
+        flex: 4;
+    }
+    .flex-item-xsm-lv5{
+        -webkit-flex: 5; /* Safari 6.1+ */
+        -ms-flex: 5; /* IE 10 */ 
+        flex: 5;
+    }
+    .flex-item-xsm-lv6{
+        -webkit-flex: 6; /* Safari 6.1+ */
+        -ms-flex: 6; /* IE 10 */ 
+        flex: 6;
+    }
+    .flex-item-xsm-lv7{
+        -webkit-flex: 7; /* Safari 6.1+ */
+        -ms-flex: 7; /* IE 10 */ 
+        flex: 7;
+    }
+    .flex-item-xsm-lv8{
+        -webkit-flex: 8; /* Safari 6.1+ */
+        -ms-flex: 8; /* IE 10 */ 
+        flex: 8;
+    }
+    .flex-item-xsm-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-xsm-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-xsm-lv10{
+        -webkit-flex: 10; /* Safari 6.1+ */
+        -ms-flex: 10; /* IE 10 */ 
+        flex: 10;
+    }
+    .flex-item-xsm-lv11{
+        -webkit-flex: 11; /* Safari 6.1+ */
+        -ms-flex: 11; /* IE 10 */ 
+        flex: 11;
+    }
+    .flex-item-xsm-lv12{
+        -webkit-flex: 12; /* Safari 6.1+ */
+        -ms-flex: 12; /* IE 10 */ 
+        flex: 12;
+    }
+    
+}
+@media screen and (min-width:554px) and (max-width:767px){
+    .flex-layout-sm {
+        display: -webkit-flex;
+        display:inline-flex;
+    }
+    .flex-layout-sm-horizontal{
+        flex-direction: row;
+    }
+    .flex-layout-sm-vertical{
+        flex-direction: column;
+    }
+    .flex-layout-sm-horizontal-reverse{
+        flex-direction: row-reverse;
+    }
+    .flex-item-sm-lv1{
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */ 
+        flex: 1;
+    }
+    .flex-item-sm-lv2{
+        -webkit-flex: 2; /* Safari 6.1+ */
+        -ms-flex: 2; /* IE 10 */ 
+        flex: 2;
+    }
+    .flex-item-sm-lv3{
+        -webkit-flex: 3; /* Safari 6.1+ */
+        -ms-flex: 3; /* IE 10 */ 
+        flex: 3;
+    }
+    .flex-item-sm-lv4{
+        -webkit-flex: 4; /* Safari 6.1+ */
+        -ms-flex: 4; /* IE 10 */ 
+        flex: 4;
+    }
+    .flex-item-sm-lv5{
+        -webkit-flex: 5; /* Safari 6.1+ */
+        -ms-flex: 5; /* IE 10 */ 
+        flex: 5;
+    }
+    .flex-item-sm-lv6{
+        -webkit-flex: 6; /* Safari 6.1+ */
+        -ms-flex: 6; /* IE 10 */ 
+        flex: 6;
+    }
+    .flex-item-sm-lv7{
+        -webkit-flex: 7; /* Safari 6.1+ */
+        -ms-flex: 7; /* IE 10 */ 
+        flex: 7;
+    }
+    .flex-item-sm-lv8{
+        -webkit-flex: 8; /* Safari 6.1+ */
+        -ms-flex: 8; /* IE 10 */ 
+        flex: 8;
+    }
+    .flex-item-sm-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-sm-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-sm-lv10{
+        -webkit-flex: 10; /* Safari 6.1+ */
+        -ms-flex: 10; /* IE 10 */ 
+        flex: 10;
+    }
+    .flex-item-sm-lv11{
+        -webkit-flex: 11; /* Safari 6.1+ */
+        -ms-flex: 11; /* IE 10 */ 
+        flex: 11;
+    }
+    .flex-item-sm-lv12{
+        -webkit-flex: 12; /* Safari 6.1+ */
+        -ms-flex: 12; /* IE 10 */ 
+        flex: 12;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:991px){
+    .flex-layout-md {
+        display: -webkit-flex;
+        display:inline-flex;
+    }
+    .flex-layout-md-horizontal{
+        flex-direction: row;
+    }
+    .flex-layout-md-vertical{
+        flex-direction: column;
+    }
+    .flex-layout-md-horizontal-reverse{
+        flex-direction: row-reverse;
+    }
+    .flex-item-md-lv1{
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */ 
+        flex: 1;
+    }
+    .flex-item-md-lv2{
+        -webkit-flex: 2; /* Safari 6.1+ */
+        -ms-flex: 2; /* IE 10 */ 
+        flex: 2;
+        
+    }
+    .flex-item-md-lv3{
+        -webkit-flex: 3; /* Safari 6.1+ */
+        -ms-flex: 3; /* IE 10 */ 
+        flex: 3;
+    }
+    .flex-item-md-lv4{
+        -webkit-flex: 4; /* Safari 6.1+ */
+        -ms-flex: 4; /* IE 10 */ 
+        flex: 4;
+    }
+    .flex-item-md-lv5{
+        -webkit-flex: 5; /* Safari 6.1+ */
+        -ms-flex: 5; /* IE 10 */ 
+        flex: 5;
+    }
+    .flex-item-md-lv6{
+        -webkit-flex: 6; /* Safari 6.1+ */
+        -ms-flex: 6; /* IE 10 */ 
+        flex: 6;
+    }
+    .flex-item-md-lv7{
+        -webkit-flex: 7; /* Safari 6.1+ */
+        -ms-flex: 7; /* IE 10 */ 
+        flex: 7;
+    }
+    .flex-item-md-lv8{
+        -webkit-flex: 8; /* Safari 6.1+ */
+        -ms-flex: 8; /* IE 10 */ 
+        flex: 8;
+    }
+    .flex-item-md-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-md-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-md-lv10{
+        -webkit-flex: 10; /* Safari 6.1+ */
+        -ms-flex: 10; /* IE 10 */ 
+        flex: 10;
+    }
+    .flex-item-md-lv11{
+        -webkit-flex: 11; /* Safari 6.1+ */
+        -ms-flex: 11; /* IE 10 */ 
+        flex: 11;
+    }
+    .flex-item-md-lv12{
+        -webkit-flex: 12; /* Safari 6.1+ */
+        -ms-flex: 12; /* IE 10 */ 
+        flex: 12;
+    }
+}
+@media screen and (min-width: 992px) and (max-width:1199px){
+    .flex-layout-lg {
+        display: -webkit-flex;
+        display:inline-flex;
+    }
+    .flex-layout-lg-horizontal{
+        flex-direction: row;
+    }
+    .flex-layout-lg-vertical{
+        flex-direction: column;
+    }
+    .flex-layout-lg-horizontal-reverse{
+        flex-direction: row-reverse;
+    }
+    .flex-item-lg-lv1{
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */ 
+        flex: 1;
+    }
+    .flex-item-lg-lv2{
+        -webkit-flex: 2; /* Safari 6.1+ */
+        -ms-flex: 2; /* IE 10 */ 
+        flex: 2;
+    }
+    .flex-item-lg-lv3{
+        -webkit-flex: 3; /* Safari 6.1+ */
+        -ms-flex: 3; /* IE 10 */ 
+        flex: 3;
+    }
+    .flex-item-lg-lv4{
+        -webkit-flex: 4; /* Safari 6.1+ */
+        -ms-flex: 4; /* IE 10 */ 
+        flex: 4;
+    }
+    .flex-item-lg-lv5{
+        -webkit-flex: 5; /* Safari 6.1+ */
+        -ms-flex: 5; /* IE 10 */ 
+        flex: 5;
+    }
+    .flex-item-lg-lv6{
+        -webkit-flex: 6; /* Safari 6.1+ */
+        -ms-flex: 6; /* IE 10 */ 
+        flex: 6;
+    }
+    .flex-item-lg-lv7{
+        -webkit-flex: 7; /* Safari 6.1+ */
+        -ms-flex: 7; /* IE 10 */ 
+        flex: 7;
+    }
+    .flex-item-lg-lv8{
+        -webkit-flex: 8; /* Safari 6.1+ */
+        -ms-flex: 8; /* IE 10 */ 
+        flex: 8;
+    }
+    .flex-item-lg-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-lg-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-lg-lv10{
+        -webkit-flex: 10; /* Safari 6.1+ */
+        -ms-flex: 10; /* IE 10 */ 
+        flex: 10;
+    }
+    .flex-item-lg-lv11{
+        -webkit-flex: 11; /* Safari 6.1+ */
+        -ms-flex: 11; /* IE 10 */ 
+        flex: 11;
+    }
+    .flex-item-lg-lv12{
+        -webkit-flex: 12; /* Safari 6.1+ */
+        -ms-flex: 12; /* IE 10 */ 
+        flex: 12;
+    }
+}
+@media screen and (min-width: 1200px){
+    .flex-layout-xlg {
+        display: -webkit-flex;
+        display:inline-flex;
+    }
+    .flex-layout-xlg-horizontal{
+        flex-direction: row;
+    }
+    .flex-layout-xlg-vertical{
+        flex-direction: column;
+    }
+    .flex-layout-xlg-horizontal-reverse{
+        flex-direction: row-reverse;
+    }
+    .flex-item-xlg-lv1{
+        -webkit-flex: 1; /* Safari 6.1+ */
+        -ms-flex: 1; /* IE 10 */ 
+        flex: 1;
+    }
+    .flex-item-xlg-lv2{
+        -webkit-flex: 2; /* Safari 6.1+ */
+        -ms-flex: 2; /* IE 10 */ 
+        flex: 2;
+    }
+    .flex-item-xlg-lv3{
+        -webkit-flex: 3; /* Safari 6.1+ */
+        -ms-flex: 3; /* IE 10 */ 
+        flex: 3;
+    }
+    .flex-item-xlg-lv4{
+        -webkit-flex: 4; /* Safari 6.1+ */
+        -ms-flex: 4; /* IE 10 */ 
+        flex: 4;
+    }
+    .flex-item-xlg-lv5{
+        -webkit-flex: 5; /* Safari 6.1+ */
+        -ms-flex: 5; /* IE 10 */ 
+        flex: 5;
+    }
+    .flex-item-xlg-lv6{
+        -webkit-flex: 6; /* Safari 6.1+ */
+        -ms-flex: 6; /* IE 10 */ 
+        flex: 6;
+    }
+    .flex-item-xlg-lv7{
+        -webkit-flex: 7; /* Safari 6.1+ */
+        -ms-flex: 7; /* IE 10 */ 
+        flex: 7;
+    }
+    .flex-item-xlg-lv8{
+        -webkit-flex: 8; /* Safari 6.1+ */
+        -ms-flex: 8; /* IE 10 */ 
+        flex: 8;
+    }
+    .flex-item-xlg-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-xlg-lv9{
+        -webkit-flex: 9; /* Safari 6.1+ */
+        -ms-flex: 9; /* IE 10 */ 
+        flex: 9;
+    }
+    .flex-item-xlg-lv10{
+        -webkit-flex: 10; /* Safari 6.1+ */
+        -ms-flex: 10; /* IE 10 */ 
+        flex: 10;
+    }
+    .flex-item-xlg-lv11{
+        -webkit-flex: 11; /* Safari 6.1+ */
+        -ms-flex: 11; /* IE 10 */ 
+        flex: 11;
+    }
+    .flex-item-xlg-lv12{
+        -webkit-flex: 12; /* Safari 6.1+ */
+        -ms-flex: 12; /* IE 10 */ 
+        flex: 12;
+    }
+}
+.flex-layout {
+    display: -webkit-flex;
+    display:flex;
+}
+.flex-item-lv1{
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */ 
+    flex: 1;
+}
+.flex-item-lv2{
+    -webkit-flex: 2; /* Safari 6.1+ */
+    -ms-flex: 2; /* IE 10 */ 
+    flex: 2;
+}
+.flex-item-lv3{
+    -webkit-flex: 3; /* Safari 6.1+ */
+    -ms-flex: 3; /* IE 10 */ 
+    flex: 3;
+}
+.flex-item-lv4{
+    -webkit-flex: 4; /* Safari 6.1+ */
+    -ms-flex: 4; /* IE 10 */ 
+    flex: 4;
+}
+.flex-item-lv5{
+    -webkit-flex: 5; /* Safari 6.1+ */
+    -ms-flex: 5; /* IE 10 */ 
+    flex: 5;
+}
+.flex-item-lv6{
+    -webkit-flex: 6; /* Safari 6.1+ */
+    -ms-flex: 6; /* IE 10 */ 
+    flex: 6;
+}
+.flex-item-lv7{
+    -webkit-flex: 7; /* Safari 6.1+ */
+    -ms-flex: 7; /* IE 10 */ 
+    flex: 7;
+}
+.flex-item-lv8{
+    -webkit-flex: 8; /* Safari 6.1+ */
+    -ms-flex: 8; /* IE 10 */ 
+    flex: 8;
+}
+.flex-item-lv9{
+    -webkit-flex: 9; /* Safari 6.1+ */
+    -ms-flex: 9; /* IE 10 */ 
+    flex: 9;
+}
+.flex-item-lv9{
+    -webkit-flex: 9; /* Safari 6.1+ */
+    -ms-flex: 9; /* IE 10 */ 
+    flex: 9;
+}
+.flex-item-lv10{
+    -webkit-flex: 10; /* Safari 6.1+ */
+    -ms-flex: 10; /* IE 10 */ 
+    flex: 10;
+}
+.flex-item-lv11{
+    -webkit-flex: 11; /* Safari 6.1+ */
+    -ms-flex: 11; /* IE 10 */ 
+    flex: 11;
+}
+.flex-item-lv12{
+    -webkit-flex: 12; /* Safari 6.1+ */
+    -ms-flex: 12; /* IE 10 */ 
+    flex: 12;
+}

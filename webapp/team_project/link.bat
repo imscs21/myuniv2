@@ -1,0 +1,1 @@
+mklink /j ..\webproj %CD%\public

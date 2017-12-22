@@ -1,0 +1,62 @@
+.snackbar{
+    z-index:98;
+    visibility: hidden;
+    background-color:#455A64;
+    color:white;
+    border-radius: 0.5em;
+    height:2.5em;
+    position:absolute;
+    margin-top:-3.5em;
+    padding: 0.2em;
+    box-shadow: 2px 1px 30px #888888;
+    overflow: auto;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0px;
+}
+.snackbar-container{
+    position: absolute;
+    width:100vw;
+    display:block;
+}
+.snackbar-show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2s;
+    animation: fadein 0.5s, fadeout 0.5s 2s;
+}
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+@media screen and (max-width:767.4px){
+    .snackbar{
+        left:25vw;
+        width: 50vw;
+        
+    }
+}
+@media screen and (min-width:767.5px){
+    .snackbar{
+        left:35vw;
+        width: 30vw;
+        
+    }
+}

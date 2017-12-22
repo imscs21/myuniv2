@@ -1,0 +1,42 @@
+section.user-info{
+    height: calc(100% - 2em - 1px);
+    border-bottom: 1px solid gray;
+    
+}
+footer.buttom-user-bar{
+    background-color: white;
+   height:2em;
+  
+}
+footer.buttom-user-bar > div{
+    height:inherit;
+}
+footer.buttom-user-bar  a{
+    width:100%;
+    display:inline-block;
+   
+    background-color: white;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+    height:inherit;
+    vertical-align: middle;
+}
+footer.buttom-user-bar .vertical-divider{
+    height:1.5em;
+    width:1px;
+    background-color:gray;
+    margin-top:0.25em;
+}
+footer.buttom-user-bar  a >p{
+   margin:auto;
+}
+footer.buttom-user-bar  a:hover,footer.buttom-user-bar  a:hover{
+    background-color:#1E88E5;
+    color:white;
+}
+@media screen and (max-width:767.4px){
+    .balloon2 {
+        width:70%;
+       }
+    }

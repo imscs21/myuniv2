@@ -1,0 +1,16 @@
+.phtopbar{
+    background-color: #FF5E00;
+    color: white;
+    text-align:center;
+    line-height:45px;
+    height: 45px;
+    font-size: 17px;
+    width: 100%;
+    font-weight: bold;
+}
+p {
+	text-align: center;
+}
+.cancel{
+	float: right;
+}

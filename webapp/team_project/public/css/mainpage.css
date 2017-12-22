@@ -1,0 +1,134 @@
+body{
+font-size:12px;
+font-family:굴림, gulim;
+}
+
+ul {
+    list-style:none;
+}
+
+li {
+    display:inline;
+}
+
+div.header {
+    min-width: 1200px;
+    height: 170px;
+}
+
+div.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.header h1 {
+    position: absolute;
+    left: 5%;
+    width: 212px;
+    height: 40px;
+    margin-left: -50px;
+    top: 30px;
+}
+div.header h1 img {
+    width: 200px;
+}
+
+div.header div.top{
+height:110px;
+}
+
+div.header ul.lt{
+padding-top:15px;
+padding-left:20px;
+float:left;
+}
+
+div.header div.top ul.lt .ltlink{
+text-decoration:none;
+font-weight:bold;
+padding: 0px 10px 0px 10px;
+color:black; 
+}
+
+div.header ul.rt{
+padding-top:15px;
+padding-right:20px;
+float:right;
+}
+
+div.header div.top ul.rt .rtlink{
+text-decoration:none;
+font-weight:bold;
+border-left: none;
+padding: 0px 10px 0px 10px; 
+color:black;
+}
+
+div.header div.top ul.rt .rtlink1{
+text-decoration:none;
+font-weight:bold;
+border-left: 2px solid #000000;
+padding: 0px 10px 0px 10px; 
+color:black;
+}
+
+div.header div#topmenu{
+z-index: 1000;
+height:60px;
+width:1200px;
+}
+
+div.header div#topmenu ul.menu li{
+color:white;
+background-color:#FF5E00;
+vertical-align:middle;
+line-height:60px;
+font-size: 17px;
+text-align:center;
+float:left;
+}
+div.header div#topmenu ul.menu .firstmenu{
+border-radius: 4px 0 0 4px;
+}
+div.header div#topmenu ul.menu .lastmenu{
+border-radius: 0 4px 4px 0;
+}
+
+div.header div#topmenu .menulink{
+text-decoration:none;
+display:block;
+width:200px;
+font-weight:bold;
+color: white;
+}
+
+div.header div#topmenu .menulink:hover{
+color:white;
+background-color:orange;
+-webkit-transition: all 0.4s ease;
+}
+
+div.header div#topmenu ul.menu {
+    margin:0; padding:0;
+} 
+
+#head {
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    width: 49.5%;
+    height: 500px;
+    background: #eee;
+    border-radius: 4px;
+}
+#head2 {
+    float: right;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 200px;
+    width: 49.5%;
+    height: 500px;
+    background: #eee;
+    border-radius: 4px;
+}

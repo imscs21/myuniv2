@@ -1,0 +1,29 @@
+#sidebar {
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    width: 18%;
+    height: 500px;
+    background: #eee;
+    border-radius: 4px;
+}
+#article {
+    float: right;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    width: 81%;
+    min-height: 3000px;
+    background: #eee;
+    border-radius: 4px;
+}
+#sidebar .contable {
+    background-color: #FF5E00;
+    color: white;
+    text-align:center;
+    line-height:45px;
+    height: 45px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}

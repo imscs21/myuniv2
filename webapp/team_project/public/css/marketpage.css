@@ -1,0 +1,171 @@
+#myinfo {
+	float: left;
+    position: relative;
+    margin-top: 10px;
+    width: 20%;
+    height: 260px;
+    background: #eee;
+    border-radius: 4px;
+    min-width: 150px;
+}
+#myinfo .menuname {
+    background-color: #FFBB00;
+    color: white;
+    text-align:center;
+    line-height:45px;
+    height: 45px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 10px;
+}
+#myinfo .yourpic {
+	display: block;
+	position: relative;
+	margin: auto;
+	margin-bottom: 10px;
+	background-color: white;
+	height: 130px;
+	width: 85%;
+	opacity: 0.5;
+}
+#myinfo .yourpic img {
+	position: relative;
+	display: block;
+	margin: auto;
+}
+#myinfo ul li {
+	display: block;
+	margin-bottom: 10px;
+	position: relative;
+	color: black;
+	font-weight: bold;
+	margin-left: -10px;
+}
+.shopmenu {
+    float: right;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 100px;
+    width: 19.1%;
+    height: 700px;
+    background: #eee;
+    border-radius: 4px;
+}
+.shopmenuright {
+	margin-right: 0;
+}
+.shopmenu .shopname {
+    background-color: #FF5E00;
+    color: white;
+    text-align:center;
+    line-height:45px;
+    height: 45px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 10px;
+}
+.shopmenu .html {
+	background-color: #FF7F27;
+}
+.shopmenu .css {
+	background-color: #35CDFF;
+}
+.shopmenu .js {
+	background-color: #FFC90E;
+}
+.shopmenu .php {
+	background-color: #7092BE;
+}
+.shopmenu ul li {
+	display: block;
+	margin-bottom: 10px;
+	margin-left: -20px;
+	font-size: 20px;
+}
+.shopcont{
+    height: 645px;
+    overflow: auto;
+}
+#ckbt{
+    float: right;
+}
+
+@media screen and (max-width:767px) {
+    #myinfo {
+        position: relative;
+        width: 200px;
+        height: 260px;
+        background: #eee;
+        border-radius: 4px;
+        min-width: 150px;
+        margin-left: 3vw;
+    }
+    /*최소단계 메뉴에서 다른 리스트들과 충돌x*/
+    #setblock{
+        display: block;
+        width: 70vw;
+        height: 310px;
+    }
+    .shopmenu {
+        float: right;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        width: 90vw;
+        height: 160px;
+        background: #eee;
+        border-radius: 4px;
+    }
+    .shopcont{
+        height: 100px;
+        overflow: auto;
+    }
+    .minsizemargintop{
+        margin-top: -110px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1100px) {
+    .shopmenu {
+        float: right;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 33vw;
+        height: 160px;
+        background: #eee;
+        border-radius: 4px;
+    }
+    .shopcont{
+        height: 100px;
+        overflow: auto;
+    }
+    .betweenmargin{
+        margin-left: 1vw;
+    }
+    #myinfo {
+        position: relative;
+        width: 19.5vw;
+        height: 260px;
+        background: #eee;
+        border-radius: 4px;
+        min-width: 150px;
+    }
+}
+@media screen and (min-width:1101px){
+
+}
+/*스크롤탑부분*/
+#topAutoScroll img {
+    max-width:50px; 
+    z-index:999; 
+    position:fixed; 
+    bottom:0px; 
+    right:0px;
+}
